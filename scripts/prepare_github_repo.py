@@ -2,7 +2,6 @@
 import hashlib
 import json
 from pathlib import Path
-import shutil
 
 import package_project
 
@@ -29,7 +28,10 @@ def main():
         if not path.is_file() or path.is_symlink():
             raise ValueError("Expected regular source file: " + str(path.relative_to(ROOT)))
         payloads[path.relative_to(ROOT).as_posix()] = path.read_bytes()
-    payloads["docs/EXPERIMENT_NOTES.md"] = (ROOT / "README.md").read_text().replace(
+    notes = ROOT / "docs/EXPERIMENT_NOTES.md"
+    if not notes.exists():
+        notes = ROOT / "README.md"
+    payloads["docs/EXPERIMENT_NOTES.md"] = notes.read_text().replace(
         "](REPRODUCE.md)", "](../REPRODUCE.md)").encode()
     for path in sorted((ROOT / "figures").glob("*")):
         if path.is_file() and not path.is_symlink():
@@ -42,8 +44,11 @@ def main():
     metrics.pop("details", None)
     metrics["export_note"] = "Aggregate-only export: raw evidence cards and per-case embedded trajectory excerpts omitted. See prediction CSV."
     payloads["reports/jev_rcta_hosted_metrics.json"] = (json.dumps(metrics, ensure_ascii=False, indent=2) + "\n").encode()
+    provenance = ROOT / "results/jev_rcta_hosted_full_v2"
+    if not provenance.exists():
+        provenance = ROOT / "reproducibility/jev-rcta-v2"
     for name in ("config.json", "selection.json", "data_audit.json", "transport_recovery.json"):
-        payloads["reproducibility/jev-rcta-v2/" + name] = (ROOT / "results/jev_rcta_hosted_full_v2" / name).read_bytes()
+        payloads["reproducibility/jev-rcta-v2/" + name] = (provenance / name).read_bytes()
     payloads[".env.jev-hosted.example"] = b"# Copy to .env.jev-hosted or set this environment variable.\nJEV_HOSTED_API_KEY=replace_with_your_own_key\n"
     payloads[".gitignore"] = b""".env
 .env.*
@@ -68,7 +73,10 @@ results/phase1/*
 results/full/*
 !results/full/config.json
 """
-    payloads["README.md"] = (ROOT / "github_readme.md").read_bytes()
+    readme = ROOT / "github_readme.md"
+    if not readme.exists():
+        readme = ROOT / "README.md"
+    payloads["README.md"] = readme.read_bytes()
     payloads[".github/workflows/tests.yml"] = b"""name: Offline tests
 on: [push, pull_request, workflow_dispatch]
 permissions:
