@@ -1,0 +1,36 @@
+{
+  "reused_mini": {
+    "successful_requests": 2006,
+    "input_tokens": 25602818,
+    "output_tokens": 370791,
+    "median_request_seconds": 0.7434388875262812,
+    "p95_request_seconds": 0.8856375820469111,
+    "sum_request_seconds": 1511.5367093009409,
+    "internal_retry_count": 0,
+    "models": {
+      "jev-1.13.0": 2006
+    },
+    "distinct_request_hashes": 2006,
+    "first_saved_utc": "2026-09-21T06:28:00+00:00",
+    "last_saved_utc": "2026-09-21T06:33:45+00:00",
+    "saved_file_span_minutes": 5.75
+  },
+  "new_full": {
+    "successful_requests": 7895,
+    "input_tokens": 95269584,
+    "output_tokens": 1609253,
+    "median_request_seconds": 0.7487972779199481,
+    "p95_request_seconds": 0.9398182609584183,
+    "sum_request_seconds": 6179.601390003692,
+    "internal_retry_count": 16,
+    "models": {
+      "jev-1.13.0": 7895
+    },
+    "distinct_request_hashes": 7895,
+    "first_saved_utc": "2026-09-21T07:17:59+00:00",
+    "last_saved_utc": "2026-09-21T07:50:33+00:00",
+    "saved_file_span_minutes": 32.56666666666667
+  },
+  "last_resume_only_wall_seconds": 422.1180698289536,
+  "note": "File mtime range approximates the saved request timeline, not an exact task start timestamp. Request elapsed times include internal retries; service billing and server-side caching cannot be independently verified from local logs."
+}

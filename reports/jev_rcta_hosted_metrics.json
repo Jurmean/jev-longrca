@@ -1,0 +1,136 @@
+{
+  "protocol": {
+    "protocol": "jev-rcta-choice-v2",
+    "model": "jev-1.13.0",
+    "singleton_policy": "deterministic_without_api",
+    "segment_bytes": 24000,
+    "piece_bytes": 8000,
+    "segment_steps": 60,
+    "overlap_steps": 3,
+    "overlap_bytes": 600,
+    "recall_k": 3,
+    "group_size": 8,
+    "trace_candidates": 16,
+    "trace_depth": 2,
+    "card_bytes": 7000,
+    "evidence_bytes": 1800,
+    "request_bytes": 62000,
+    "shared_context": {
+      "protocol": "jev-choice-recall-v1",
+      "model": "jev-1.13.0",
+      "chunk_bytes": 44000,
+      "piece_bytes": 16000,
+      "task_bytes": 6000,
+      "outcome_bytes": 8000,
+      "recall_k": 3,
+      "final_group_size": 8,
+      "evidence_bytes": 2400,
+      "neighbor_bytes": 500,
+      "handoff_bytes": 1600
+    },
+    "endpoint": "https://jevtypesafeai.com/api/v1/decide",
+    "expected_n": 1140,
+    "dataset_revision": "9f45acb66948d5d20c663b4ce4ec8ea5ab0076dd",
+    "manifest_sha256": "87dc29ce0eac2939d1e18f015a6acf0e7eb54950cdaccbdf9a44d0981c541ac2",
+    "source_sha256": {
+      "evaluate.py": "833a0292826c286b18118bb190fa190bc5ee160bb393169f84180b6e0c5d967f",
+      "evaluate_full.py": "4f2dcd30836d13af4bfe8c71be4ce92e99607006b4eb67de21a779f5b2dd9bba",
+      "evaluate_jev_rcta.py": "5ba42f98a832ae5f934df395e819d52923c6b12fe8ce904c833cb209ed321824",
+      "jev_rcta.py": "830591b767f0cb1f71560f83a7536e070c75781d9fd749db6efeb2696d4dbc51",
+      "jev_rcta_client.py": "7f9c9c36169d43c3aa277e34c53356c51161e2b06868f138007324f4323fb42d",
+      "probe_jev_hosted.py": "af61b2d5242fbe549fefc6799cb77182faae87ea102db2ffb0847965cad170ff",
+      "run_jev_rcta_hosted_full.py": "c06ca27e63d760c3e1d649204beb40abad890ee28acf00f1f0e25cf2dd92f083"
+    }
+  },
+  "dataset_revision": "9f45acb66948d5d20c663b4ce4ec8ea5ab0076dd",
+  "evaluated_n": 64,
+  "overall": {
+    "n": 64,
+    "role_correct": 0.28125,
+    "step_exact": 0.109375,
+    "step_within_5": 0.28125,
+    "valid_role": 1.0,
+    "valid_step": 1.0,
+    "valid_output_root_mae": 51.515625,
+    "source_weighted_valid_output_root_mae": 51.515625
+  },
+  "by_source": {
+    "swe_bench_pro": {
+      "n": 60,
+      "role_correct": 0.25,
+      "step_exact": 0.1,
+      "step_within_5": 0.25,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 54.68333333333333
+    },
+    "terminal_bench_2": {
+      "n": 1,
+      "role_correct": 0.0,
+      "step_exact": 0.0,
+      "step_within_5": 1.0,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 3
+    },
+    "travelplanner": {
+      "n": 1,
+      "role_correct": 1.0,
+      "step_exact": 0.0,
+      "step_within_5": 0.0,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 12
+    },
+    "vitabench": {
+      "n": 1,
+      "role_correct": 1.0,
+      "step_exact": 1.0,
+      "step_within_5": 1.0,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 0
+    },
+    "webarena_verified": {
+      "n": 1,
+      "role_correct": 1.0,
+      "step_exact": 0.0,
+      "step_within_5": 1.0,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 1
+    }
+  },
+  "by_method": {
+    "jev-rcta-choice-v2": {
+      "n": 64,
+      "role_correct": 0.28125,
+      "step_exact": 0.109375,
+      "step_within_5": 0.28125,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 51.515625
+    }
+  },
+  "successful_api_calls": 2514,
+  "input_tokens": 23896454,
+  "cost_note": "Use reported hosted costs in accounting, not original direct-provider pricing.",
+  "status": "paused_balance_unverifiable",
+  "expected_n": 1140,
+  "coverage": 0.056140350877192984,
+  "accounting": {
+    "successful_calls_including_partial_cases": 2642,
+    "input_tokens": 25257269,
+    "reported_cost_usd": 10.609342000000007,
+    "latest_reported_balance_usd": null,
+    "note": "Successful responses only; includes preflight and partial cases; separate control probe excluded."
+  },
+  "metrics_scope": "Completed cases only; Full results only when evaluated_n == expected_n",
+  "candidate_recall": {
+    "recall_candidates": 0.796875,
+    "trace_seeds": 0.5625,
+    "expanded_candidates": 0.859375,
+    "final_candidates": 0.453125
+  },
+  "export_note": "Aggregate-only export: raw evidence cards and per-case embedded trajectory excerpts omitted. See prediction CSV."
+}

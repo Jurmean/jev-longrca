@@ -1,0 +1,13 @@
+{
+  "trajectories": 1140,
+  "segments": 11035,
+  "segments_by_source": {
+    "swe_bench_pro": 2977,
+    "terminal_bench_2": 648,
+    "travelplanner": 5944,
+    "vitabench": 256,
+    "webarena_verified": 1210
+  },
+  "primary_text_coverage": "lossless",
+  "api_calls": 0
+}

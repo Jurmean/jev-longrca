@@ -1,0 +1,3 @@
+# JEV API evaluation, dataset downloads, scoring, reports and packaging
+# use only the Python standard library. No pip dependencies are required.
+# Python 3.8+; Python 3.11 is recommended for a shared JEV/Laya environment.

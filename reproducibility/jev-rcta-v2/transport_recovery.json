@@ -1,0 +1,11 @@
+{
+  "adapter_sha256": "942f675cd90fdf4ed2b42c6327da0256788286c8fc7e97661c51041080e20355",
+  "base_client_sha256": "7f9c9c36169d43c3aa277e34c53356c51161e2b06868f138007324f4323fb42d",
+  "method_sha256": "830591b767f0cb1f71560f83a7536e070c75781d9fd749db6efeb2696d4dbc51",
+  "retry_seconds": [
+    5,
+    10,
+    15
+  ],
+  "note": "Transport-only recovery; no change to model, endpoint, request content or scoring."
+}

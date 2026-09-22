@@ -1,0 +1,112 @@
+{
+  "protocol": {
+    "protocol": "jev-choice-recall-v1",
+    "model": "jev-1.13.0",
+    "chunk_bytes": 44000,
+    "piece_bytes": 16000,
+    "task_bytes": 6000,
+    "outcome_bytes": 8000,
+    "recall_k": 3,
+    "final_group_size": 8,
+    "evidence_bytes": 2400,
+    "neighbor_bytes": 500,
+    "handoff_bytes": 1600
+  },
+  "dataset_revision": "9f45acb66948d5d20c663b4ce4ec8ea5ab0076dd",
+  "evaluated_n": 200,
+  "overall": {
+    "n": 200,
+    "role_correct": 0.47,
+    "step_exact": 0.195,
+    "step_within_5": 0.325,
+    "valid_role": 1.0,
+    "valid_step": 1.0,
+    "valid_output_root_mae": 44.3,
+    "source_weighted_valid_output_root_mae": 44.3
+  },
+  "by_source": {
+    "swe_bench_pro": {
+      "n": 40,
+      "role_correct": 0.25,
+      "step_exact": 0.1,
+      "step_within_5": 0.25,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 54.75
+    },
+    "terminal_bench_2": {
+      "n": 40,
+      "role_correct": 0.425,
+      "step_exact": 0.25,
+      "step_within_5": 0.35,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 75.125
+    },
+    "travelplanner": {
+      "n": 40,
+      "role_correct": 0.4,
+      "step_exact": 0.15,
+      "step_within_5": 0.325,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 52.175
+    },
+    "vitabench": {
+      "n": 40,
+      "role_correct": 0.85,
+      "step_exact": 0.35,
+      "step_within_5": 0.475,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 16.65
+    },
+    "webarena_verified": {
+      "n": 40,
+      "role_correct": 0.425,
+      "step_exact": 0.125,
+      "step_within_5": 0.225,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 22.8
+    }
+  },
+  "by_method": {
+    "full_context": {
+      "n": 30,
+      "role_correct": 0.8333333333333334,
+      "step_exact": 0.43333333333333335,
+      "step_within_5": 0.6,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 11.833333333333334
+    },
+    "segmented_choice": {
+      "n": 170,
+      "role_correct": 0.40588235294117647,
+      "step_exact": 0.15294117647058825,
+      "step_within_5": 0.27647058823529413,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 50.029411764705884
+    }
+  },
+  "successful_api_calls": 2006,
+  "input_tokens": 25602818,
+  "estimated_input_cost_usd": 1.0753183560000001,
+  "cost_note": "Includes the 5 reused benchmark smoke cases; excludes only the separate 317-token API connectivity check. Price estimate, not a bill.",
+  "stage_recall": {
+    "n": 170,
+    "recall_candidates": 104,
+    "expanded_candidates": 114,
+    "final_candidates": 71,
+    "exact": 26
+  },
+  "random_expected": {
+    "role": 0.2640595238095238,
+    "step_exact": 0.012094497060961674,
+    "step_pm5": 0.1246032311743192
+  },
+  "retry_count": 0,
+  "run_wall_seconds": 271.33681881288067
+}

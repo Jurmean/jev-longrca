@@ -1,0 +1,163 @@
+{
+  "protocol": {
+    "protocol": "laya-choice-recall-token-budget-v1",
+    "model": "convaiinnovations/laya",
+    "task_bytes": 2000,
+    "outcome_bytes": 4000,
+    "recall_k": 3,
+    "final_group_size": 8,
+    "evidence_bytes": 2400,
+    "neighbor_bytes": 500,
+    "handoff_bytes": 1600,
+    "model_revision": "1c5edc17a7acd8701df6fc341c0d179f1c62c982",
+    "max_len": 8192,
+    "max_recall_options": 16,
+    "shared_token_budget": 2048,
+    "checkpoint": "English root; no language routing or fine-tuning",
+    "dtype": "float32 weights; bfloat16 CUDA autocast"
+  },
+  "dataset_revision": "9f45acb66948d5d20c663b4ce4ec8ea5ab0076dd",
+  "evaluated_n": 1140,
+  "overall": {
+    "n": 1140,
+    "role_correct": 0.14473684210526316,
+    "step_exact": 0.0,
+    "step_within_5": 0.06140350877192982,
+    "valid_role": 1.0,
+    "valid_step": 1.0,
+    "valid_output_root_mae": 77.08508771929824,
+    "source_weighted_valid_output_root_mae": 77.08508771929824
+  },
+  "by_source": {
+    "swe_bench_pro": {
+      "n": 128,
+      "role_correct": 0.515625,
+      "step_exact": 0.0,
+      "step_within_5": 0.0,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 70.4375
+    },
+    "terminal_bench_2": {
+      "n": 42,
+      "role_correct": 0.16666666666666666,
+      "step_exact": 0.0,
+      "step_within_5": 0.14285714285714285,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 85.95238095238095
+    },
+    "travelplanner": {
+      "n": 685,
+      "role_correct": 0.049635036496350364,
+      "step_exact": 0.0,
+      "step_within_5": 0.061313868613138686,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 97.36496350364963
+    },
+    "vitabench": {
+      "n": 108,
+      "role_correct": 0.5370370370370371,
+      "step_exact": 0.0,
+      "step_within_5": 0.12962962962962962,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 26.546296296296298
+    },
+    "webarena_verified": {
+      "n": 177,
+      "role_correct": 0.0,
+      "step_exact": 0.0,
+      "step_within_5": 0.04519774011299435,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 32.14124293785311
+    }
+  },
+  "by_method": {
+    "full_context": {
+      "n": 2,
+      "role_correct": 0.0,
+      "step_exact": 0.0,
+      "step_within_5": 0.0,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 9.5
+    },
+    "segmented_choice": {
+      "n": 1138,
+      "role_correct": 0.14499121265377857,
+      "step_exact": 0.0,
+      "step_within_5": 0.061511423550087874,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 77.20386643233743
+    }
+  },
+  "input_tokens": 151592099,
+  "local_inference": {
+    "trajectories": 1140,
+    "history_records_covered": 177884,
+    "original_content_characters_covered": 207939112,
+    "recall_original_characters_in_forwarded_requests": 188722847,
+    "recall_original_characters_in_singleton_only_requests": 19216265,
+    "coverage_note": "Coverage means lossless recall request construction. Singleton-only requests retain the sole candidate without a model forward.",
+    "local_calls": 25610,
+    "model_forwards": 25224,
+    "deterministic_singleton_questions": 1526,
+    "input_tokens": 151592099,
+    "max_sequence_tokens": 8192,
+    "silent_truncations": 0,
+    "explicit_evidence_shrink_calls": 2472,
+    "median_local_call_seconds": 0.6120224428595975,
+    "p95_local_call_seconds": 0.9821317631285638,
+    "sum_local_call_seconds": 15420.370160717051,
+    "inference_wall_seconds": 2805.8515870571136,
+    "full_run_wall_seconds": 2841.5221972465515,
+    "gpu_workers": 8,
+    "gpu_model": "NVIDIA GeForce RTX 3080 Ti",
+    "peak_memory_bytes_per_worker": 3429864960,
+    "upstream_weights_and_source_hashes_verified": true
+  },
+  "inference_api_cost_usd": 0,
+  "cost_note": "Local GPU inference; electricity/hardware costs not estimated.",
+  "stage_recall": {
+    "n": 1138,
+    "recall_candidates": 370,
+    "expanded_candidates": 428,
+    "final_candidates": 105,
+    "exact": 0
+  },
+  "mini_subset": {
+    "n": 200,
+    "role_correct": 0.27,
+    "step_exact": 0.0,
+    "step_within_5": 0.08,
+    "valid_role": 1.0,
+    "valid_step": 1.0,
+    "valid_output_root_mae": 57.355
+  },
+  "uniform_random_expected": {
+    "role_correct": 0.22201127819548871,
+    "step_exact": 0.010350438813089393
+  },
+  "post_run_diagnostics": {
+    "step_zero_predictions": 1062,
+    "first_final_candidate_predictions": 1063,
+    "reference_step_zero_count": 0,
+    "predicted_role_counts": {
+      "Computer_terminal": 924,
+      "Verification_Expert": 2,
+      "Action_Expert": 61,
+      "Task_Planner": 2,
+      "DiagnostAgent": 122,
+      "human": 28,
+      "JudgeAgent": 1
+    },
+    "short_control_correct": 18,
+    "short_control_n": 18,
+    "unique_short_control_texts": 3,
+    "notes": "Post-run diagnostics only. Three short English texts, three option orders and two max_len settings; not a test of long-context RCA. No benchmark predictions were changed."
+  }
+}

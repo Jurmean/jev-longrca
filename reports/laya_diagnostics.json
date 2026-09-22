@@ -1,0 +1,18 @@
+{
+  "step_zero_predictions": 1062,
+  "first_final_candidate_predictions": 1063,
+  "reference_step_zero_count": 0,
+  "predicted_role_counts": {
+    "Computer_terminal": 924,
+    "Verification_Expert": 2,
+    "Action_Expert": 61,
+    "Task_Planner": 2,
+    "DiagnostAgent": 122,
+    "human": 28,
+    "JudgeAgent": 1
+  },
+  "short_control_correct": 18,
+  "short_control_n": 18,
+  "unique_short_control_texts": 3,
+  "notes": "Post-run diagnostics only. Three short English texts, three option orders and two max_len settings; not a test of long-context RCA. No benchmark predictions were changed."
+}

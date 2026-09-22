@@ -1,0 +1,837 @@
+{
+  "purpose": "Short English diagnostic controls, not benchmark results; no parameter selection from these checks.",
+  "native_max_len": 512,
+  "native_head_max_len": 192,
+  "tests": [
+    {
+      "case": "billing",
+      "option_order": [
+        "billing",
+        "account",
+        "shipping"
+      ],
+      "max_len": 512,
+      "state": "My credit card was charged twice for one purchase. Please refund the duplicate payment.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking"
+          }
+        }
+      },
+      "expected": "billing",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "billing": 0.9722,
+              "account": 0.0155,
+              "shipping": 0.0122
+            },
+            "confidence": 0.8672,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 53,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.5362788720522076
+    },
+    {
+      "case": "billing",
+      "option_order": [
+        "billing",
+        "account",
+        "shipping"
+      ],
+      "max_len": 8192,
+      "state": "My credit card was charged twice for one purchase. Please refund the duplicate payment.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking"
+          }
+        }
+      },
+      "expected": "billing",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "billing": 0.9722,
+              "account": 0.0155,
+              "shipping": 0.0122
+            },
+            "confidence": 0.8672,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 53,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.0436431048437953
+    },
+    {
+      "case": "billing",
+      "option_order": [
+        "account",
+        "shipping",
+        "billing"
+      ],
+      "max_len": 512,
+      "state": "My credit card was charged twice for one purchase. Please refund the duplicate payment.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds"
+          }
+        }
+      },
+      "expected": "billing",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "account": 0.0149,
+              "shipping": 0.0122,
+              "billing": 0.9729
+            },
+            "confidence": 0.8697,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 53,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.042264114832505584
+    },
+    {
+      "case": "billing",
+      "option_order": [
+        "account",
+        "shipping",
+        "billing"
+      ],
+      "max_len": 8192,
+      "state": "My credit card was charged twice for one purchase. Please refund the duplicate payment.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds"
+          }
+        }
+      },
+      "expected": "billing",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "account": 0.0149,
+              "shipping": 0.0122,
+              "billing": 0.9729
+            },
+            "confidence": 0.8697,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 53,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.04226122586987913
+    },
+    {
+      "case": "billing",
+      "option_order": [
+        "shipping",
+        "billing",
+        "account"
+      ],
+      "max_len": 512,
+      "state": "My credit card was charged twice for one purchase. Please refund the duplicate payment.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems"
+          }
+        }
+      },
+      "expected": "billing",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "shipping": 0.0124,
+              "billing": 0.9612,
+              "account": 0.0264
+            },
+            "confidence": 0.8285,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 53,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.04145830892957747
+    },
+    {
+      "case": "billing",
+      "option_order": [
+        "shipping",
+        "billing",
+        "account"
+      ],
+      "max_len": 8192,
+      "state": "My credit card was charged twice for one purchase. Please refund the duplicate payment.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems"
+          }
+        }
+      },
+      "expected": "billing",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "shipping": 0.0124,
+              "billing": 0.9612,
+              "account": 0.0264
+            },
+            "confidence": 0.8285,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 53,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.04144060704857111
+    },
+    {
+      "case": "account",
+      "option_order": [
+        "billing",
+        "account",
+        "shipping"
+      ],
+      "max_len": 512,
+      "state": "I forgot my password and cannot sign in to my account. Please help me reset my password.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking"
+          }
+        }
+      },
+      "expected": "account",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "account",
+            "probabilities": {
+              "billing": 0.0085,
+              "account": 0.9853,
+              "shipping": 0.0063
+            },
+            "confidence": 0.9211,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 56,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.04268025001510978
+    },
+    {
+      "case": "account",
+      "option_order": [
+        "billing",
+        "account",
+        "shipping"
+      ],
+      "max_len": 8192,
+      "state": "I forgot my password and cannot sign in to my account. Please help me reset my password.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking"
+          }
+        }
+      },
+      "expected": "account",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "account",
+            "probabilities": {
+              "billing": 0.0085,
+              "account": 0.9853,
+              "shipping": 0.0063
+            },
+            "confidence": 0.9211,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 56,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.039931738981977105
+    },
+    {
+      "case": "account",
+      "option_order": [
+        "account",
+        "shipping",
+        "billing"
+      ],
+      "max_len": 512,
+      "state": "I forgot my password and cannot sign in to my account. Please help me reset my password.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds"
+          }
+        }
+      },
+      "expected": "account",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "account",
+            "probabilities": {
+              "account": 0.9831,
+              "shipping": 0.0053,
+              "billing": 0.0116
+            },
+            "confidence": 0.9123,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 56,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.042220187140628695
+    },
+    {
+      "case": "account",
+      "option_order": [
+        "account",
+        "shipping",
+        "billing"
+      ],
+      "max_len": 8192,
+      "state": "I forgot my password and cannot sign in to my account. Please help me reset my password.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds"
+          }
+        }
+      },
+      "expected": "account",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "account",
+            "probabilities": {
+              "account": 0.9831,
+              "shipping": 0.0053,
+              "billing": 0.0116
+            },
+            "confidence": 0.9123,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 56,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.0401502400636673
+    },
+    {
+      "case": "account",
+      "option_order": [
+        "shipping",
+        "billing",
+        "account"
+      ],
+      "max_len": 512,
+      "state": "I forgot my password and cannot sign in to my account. Please help me reset my password.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems"
+          }
+        }
+      },
+      "expected": "account",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "account",
+            "probabilities": {
+              "shipping": 0.0209,
+              "billing": 0.0474,
+              "account": 0.9317
+            },
+            "confidence": 0.735,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 56,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.04012639285065234
+    },
+    {
+      "case": "account",
+      "option_order": [
+        "shipping",
+        "billing",
+        "account"
+      ],
+      "max_len": 8192,
+      "state": "I forgot my password and cannot sign in to my account. Please help me reset my password.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems"
+          }
+        }
+      },
+      "expected": "account",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "account",
+            "probabilities": {
+              "shipping": 0.0209,
+              "billing": 0.0474,
+              "account": 0.9317
+            },
+            "confidence": 0.735,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 56,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.040199970826506615
+    },
+    {
+      "case": "shipping",
+      "option_order": [
+        "billing",
+        "account",
+        "shipping"
+      ],
+      "max_len": 512,
+      "state": "My package has not arrived. The tracking page says it is still in transit. Where is my delivery?",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking"
+          }
+        }
+      },
+      "expected": "shipping",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "shipping",
+            "probabilities": {
+              "billing": 0.0071,
+              "account": 0.01,
+              "shipping": 0.9829
+            },
+            "confidence": 0.9106,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 58,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.042413122951984406
+    },
+    {
+      "case": "shipping",
+      "option_order": [
+        "billing",
+        "account",
+        "shipping"
+      ],
+      "max_len": 8192,
+      "state": "My package has not arrived. The tracking page says it is still in transit. Where is my delivery?",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking"
+          }
+        }
+      },
+      "expected": "shipping",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "shipping",
+            "probabilities": {
+              "billing": 0.0071,
+              "account": 0.01,
+              "shipping": 0.9829
+            },
+            "confidence": 0.9106,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 58,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.041180540109053254
+    },
+    {
+      "case": "shipping",
+      "option_order": [
+        "account",
+        "shipping",
+        "billing"
+      ],
+      "max_len": 512,
+      "state": "My package has not arrived. The tracking page says it is still in transit. Where is my delivery?",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds"
+          }
+        }
+      },
+      "expected": "shipping",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "shipping",
+            "probabilities": {
+              "account": 0.0026,
+              "shipping": 0.9942,
+              "billing": 0.0032
+            },
+            "confidence": 0.964,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 58,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.041446128161624074
+    },
+    {
+      "case": "shipping",
+      "option_order": [
+        "account",
+        "shipping",
+        "billing"
+      ],
+      "max_len": 8192,
+      "state": "My package has not arrived. The tracking page says it is still in transit. Where is my delivery?",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "account": "Login and password problems",
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds"
+          }
+        }
+      },
+      "expected": "shipping",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "shipping",
+            "probabilities": {
+              "account": 0.0026,
+              "shipping": 0.9942,
+              "billing": 0.0032
+            },
+            "confidence": 0.964,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 58,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.04143222398124635
+    },
+    {
+      "case": "shipping",
+      "option_order": [
+        "shipping",
+        "billing",
+        "account"
+      ],
+      "max_len": 512,
+      "state": "My package has not arrived. The tracking page says it is still in transit. Where is my delivery?",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems"
+          }
+        }
+      },
+      "expected": "shipping",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "shipping",
+            "probabilities": {
+              "shipping": 0.9915,
+              "billing": 0.0041,
+              "account": 0.0044
+            },
+            "confidence": 0.95,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 58,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.04129398986697197
+    },
+    {
+      "case": "shipping",
+      "option_order": [
+        "shipping",
+        "billing",
+        "account"
+      ],
+      "max_len": 8192,
+      "state": "My package has not arrived. The tracking page says it is still in transit. Where is my delivery?",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which customer support category matches this message?",
+          "criteria": {
+            "shipping": "Delivery and package tracking",
+            "billing": "Payment charges and refunds",
+            "account": "Login and password problems"
+          }
+        }
+      },
+      "expected": "shipping",
+      "correct": true,
+      "response": {
+        "model": "rl-agent",
+        "answers": {
+          "route": {
+            "type": "choice",
+            "choice": "shipping",
+            "probabilities": {
+              "shipping": 0.9915,
+              "billing": 0.0041,
+              "account": 0.0044
+            },
+            "confidence": 0.95,
+            "rl_agent": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 58,
+          "output_tokens": 0
+        }
+      },
+      "seconds": 0.041156850988045335
+    }
+  ],
+  "correct": 18,
+  "n": 18
+}

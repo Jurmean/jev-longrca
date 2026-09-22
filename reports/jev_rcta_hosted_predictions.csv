@@ -1,0 +1,65 @@
+question_ID,source,predicted_role,predicted_step,reference_role,reference_step,role_correct,step_exact,step_within_5,api_calls,input_tokens
+swe_bench_pro__001,swe_bench_pro,ActionAgent,160,DiagnostAgent (-> ActionAgent),25,False,False,False,79,773151
+swe_bench_pro__002,swe_bench_pro,JudgeAgent,7,DiagnostAgent (-> ActionAgent),21,False,False,False,24,232205
+swe_bench_pro__003,swe_bench_pro,ActionAgent,83,DiagnostAgent (-> ActionAgent),246,False,False,False,48,509363
+swe_bench_pro__004,swe_bench_pro,ActionAgent,75,DiagnostAgent (-> ActionAgent),124,False,False,False,42,430716
+swe_bench_pro__005,swe_bench_pro,ActionAgent,33,DiagnostAgent (-> ActionAgent),33,False,True,True,54,630671
+swe_bench_pro__006,swe_bench_pro,JudgeAgent,128,ActionAgent,56,False,False,False,42,387523
+swe_bench_pro__007,swe_bench_pro,ActionAgent,38,DiagnostAgent (-> ActionAgent),27,False,False,False,30,315719
+swe_bench_pro__008,swe_bench_pro,ActionAgent,64,ActionAgent,54,True,False,False,49,491634
+swe_bench_pro__009,swe_bench_pro,ActionAgent,46,ActionAgent,52,True,False,False,32,305251
+swe_bench_pro__010,swe_bench_pro,ActionAgent,76,ActionAgent,76,True,True,True,46,406996
+swe_bench_pro__011,swe_bench_pro,ActionAgent,79,DiagnostAgent (-> ActionAgent),17,False,False,False,82,823537
+swe_bench_pro__012,swe_bench_pro,ActionAgent,32,DiagnostAgent (-> ActionAgent),21,False,False,False,22,181034
+swe_bench_pro__013,swe_bench_pro,ActionAgent,28,DiagnostAgent (-> ActionAgent),23,False,False,True,23,149492
+swe_bench_pro__014,swe_bench_pro,ActionAgent,36,DiagnostAgent (-> ActionAgent),31,False,False,True,24,228325
+swe_bench_pro__015,swe_bench_pro,ActionAgent,36,DiagnostAgent (-> ActionAgent),110,False,False,False,50,493927
+swe_bench_pro__016,swe_bench_pro,ActionAgent,50,DiagnostAgent (-> ActionAgent),49,False,False,True,40,366503
+swe_bench_pro__017,swe_bench_pro,ActionAgent,304,ActionAgent,130,True,False,False,46,512530
+swe_bench_pro__018,swe_bench_pro,ActionAgent,25,DiagnostAgent,23,False,False,True,24,206495
+swe_bench_pro__019,swe_bench_pro,ActionAgent,57,DiagnostAgent (-> ActionAgent),57,False,True,True,32,310918
+swe_bench_pro__020,swe_bench_pro,DiagnostAgent,19,DiagnostAgent (-> ActionAgent),28,True,False,False,22,167219
+swe_bench_pro__021,swe_bench_pro,ActionAgent,68,DiagnostAgent (-> ActionAgent),21,False,False,False,39,380750
+swe_bench_pro__022,swe_bench_pro,JudgeAgent,39,DiagnostAgent (-> ActionAgent),23,False,False,False,21,179414
+swe_bench_pro__023,swe_bench_pro,DiagnostAgent,39,DiagnostAgent (-> ActionAgent),37,True,False,True,29,287740
+swe_bench_pro__024,swe_bench_pro,ActionAgent,73,DiagnostAgent (-> ActionAgent),44,False,False,False,67,657324
+swe_bench_pro__025,swe_bench_pro,ActionAgent,20,DiagnostAgent (-> ActionAgent),42,False,False,False,34,295252
+swe_bench_pro__026,swe_bench_pro,ActionAgent,90,DiagnostAgent (-> ActionAgent),31,False,False,False,25,245040
+swe_bench_pro__027,swe_bench_pro,ActionAgent,132,ActionAgent,203,True,False,False,63,597902
+swe_bench_pro__028,swe_bench_pro,ActionAgent,109,DiagnostAgent (-> ActionAgent),102,False,False,False,53,501773
+swe_bench_pro__029,swe_bench_pro,JudgeAgent,15,ActionAgent,106,False,False,False,34,326659
+swe_bench_pro__030,swe_bench_pro,ActionAgent,42,ActionAgent,42,True,True,True,27,261255
+swe_bench_pro__031,swe_bench_pro,ActionAgent,30,DiagnostAgent (-> ActionAgent),25,False,False,True,35,326915
+swe_bench_pro__032,swe_bench_pro,JudgeAgent,43,ActionAgent,60,False,False,False,19,162109
+swe_bench_pro__033,swe_bench_pro,DiagnostAgent,51,ActionAgent,99,False,False,False,40,347788
+swe_bench_pro__034,swe_bench_pro,ActionAgent,38,DiagnostAgent (-> ActionAgent),66,False,False,False,36,323917
+swe_bench_pro__035,swe_bench_pro,ActionAgent,62,DiagnostAgent (-> ActionAgent),25,False,False,False,30,260345
+swe_bench_pro__036,swe_bench_pro,ActionAgent,88,DiagnostAgent,25,False,False,False,38,352227
+swe_bench_pro__037,swe_bench_pro,ActionAgent,97,DiagnostAgent (-> ActionAgent),19,False,False,False,33,306207
+swe_bench_pro__038,swe_bench_pro,ActionAgent,44,JudgeAgent,121,False,False,False,37,290587
+swe_bench_pro__039,swe_bench_pro,JudgeAgent,70,DiagnostAgent (-> ActionAgent),43,False,False,False,104,1008797
+swe_bench_pro__040,swe_bench_pro,ActionAgent,34,DiagnostAgent (-> ActionAgent),23,False,False,False,28,249017
+swe_bench_pro__041,swe_bench_pro,ActionAgent,34,DiagnostAgent (-> ActionAgent),148,False,False,False,38,364560
+swe_bench_pro__042,swe_bench_pro,ActionAgent,27,ActionAgent,22,True,False,True,38,312408
+swe_bench_pro__043,swe_bench_pro,ActionAgent,458,ActionAgent,72,True,False,False,74,745625
+swe_bench_pro__044,swe_bench_pro,ActionAgent,176,DiagnostAgent (-> ActionAgent),57,False,False,False,52,483311
+swe_bench_pro__045,swe_bench_pro,ActionAgent,195,ActionAgent,48,True,False,False,34,330474
+swe_bench_pro__046,swe_bench_pro,ActionAgent,235,DiagnostAgent (-> ActionAgent),39,False,False,False,51,499424
+swe_bench_pro__047,swe_bench_pro,JudgeAgent,210,ActionAgent,133,False,False,False,44,373300
+swe_bench_pro__048,swe_bench_pro,ActionAgent,31,DiagnostAgent (-> ActionAgent),33,False,False,True,30,256441
+swe_bench_pro__049,swe_bench_pro,JudgeAgent,101,ActionAgent,44,False,False,False,31,271502
+swe_bench_pro__050,swe_bench_pro,ActionAgent,54,ActionAgent,54,True,True,True,58,615121
+swe_bench_pro__051,swe_bench_pro,ActionAgent,56,DiagnostAgent,35,False,False,False,32,300796
+swe_bench_pro__052,swe_bench_pro,ActionAgent,127,ActionAgent,204,True,False,False,49,557825
+swe_bench_pro__053,swe_bench_pro,ActionAgent,48,DiagnostAgent (-> ActionAgent),181,False,False,False,75,692918
+swe_bench_pro__054,swe_bench_pro,ActionAgent,97,DiagnostAgent (-> ActionAgent),51,False,False,False,40,337610
+swe_bench_pro__055,swe_bench_pro,ActionAgent,73,ActionAgent,70,True,False,True,36,355182
+swe_bench_pro__056,swe_bench_pro,ActionAgent,122,DiagnostAgent (-> ActionAgent),45,False,False,False,68,708997
+swe_bench_pro__057,swe_bench_pro,ActionAgent,123,DiagnostAgent,80,False,False,False,45,446265
+swe_bench_pro__058,swe_bench_pro,ActionAgent,40,ActionAgent,40,True,True,True,36,287361
+swe_bench_pro__059,swe_bench_pro,ActionAgent,226,DiagnostAgent (-> ActionAgent),19,False,False,False,42,419674
+swe_bench_pro__114,swe_bench_pro,JudgeAgent,54,DiagnostAgent (-> ActionAgent),21,False,False,False,18,146941
+terminal_bench_2__003,terminal_bench_2,ActionAgent,13,DiagnostAgent (-> ActionAgent),10,False,False,True,12,69582
+travelplanner__357,travelplanner,manager_agent,16,manager_agent,4,True,False,False,3,18968
+vitabench__089,vitabench,Action_Expert,8,Action_Expert,8,True,True,True,2,3145
+webarena_verified__099,webarena_verified,Verification_Expert,8,Verification_Expert,9,True,False,True,3,14797

@@ -1,0 +1,15 @@
+{
+  "protocol": "jev-choice-recall-v1",
+  "model": "jev-1.13.0",
+  "chunk_bytes": 44000,
+  "piece_bytes": 16000,
+  "task_bytes": 6000,
+  "outcome_bytes": 8000,
+  "recall_k": 3,
+  "final_group_size": 8,
+  "evidence_bytes": 2400,
+  "neighbor_bytes": 500,
+  "handoff_bytes": 1600,
+  "dataset_revision": "9f45acb66948d5d20c663b4ce4ec8ea5ab0076dd",
+  "runner_sha256": "833a0292826c286b18118bb190fa190bc5ee160bb393169f84180b6e0c5d967f"
+}

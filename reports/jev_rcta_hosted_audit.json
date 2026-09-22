@@ -1,0 +1,35 @@
+{
+  "status": "paused_balance_unverifiable",
+  "expected_n": 1140,
+  "completed_n": 64,
+  "replayed_successful_calls": 2514,
+  "prediction_replay": "pass",
+  "initial_text_coverage": "lossless for all completed cases",
+  "frozen_sources": "pass",
+  "relation_counts": {
+    "uncertain": 33,
+    "local": 480,
+    "unrelated": 4,
+    "upstream": 58
+  },
+  "accounting": {
+    "successful_calls_including_partial_cases": 2642,
+    "input_tokens": 25257269,
+    "reported_cost_usd": 10.609342000000007,
+    "latest_reported_balance_usd": null,
+    "note": "Successful responses only; includes preflight and partial cases; separate control probe excluded."
+  },
+  "full_segmentation_audit": {
+    "trajectories": 1140,
+    "segments": 11035,
+    "segments_by_source": {
+      "swe_bench_pro": 2977,
+      "terminal_bench_2": 648,
+      "travelplanner": 5944,
+      "vitabench": 256,
+      "webarena_verified": 1210
+    },
+    "primary_text_coverage": "lossless",
+    "api_calls": 0
+  }
+}

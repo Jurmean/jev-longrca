@@ -1,0 +1,18 @@
+{
+  "trajectories": 1140,
+  "calls": 9901,
+  "input_tokens": 120872402,
+  "output_tokens": 1980044,
+  "history_records_covered": 177884,
+  "checks_passed": [
+    "dataset_checksums",
+    "runner_digest",
+    "pinned_response_model",
+    "valid_api_choices",
+    "all_history_text_covered",
+    "predictions_match_raw_responses",
+    "token_accounting",
+    "no_api_key_in_call_artifacts",
+    "no_top_level_reference_labels_in_state"
+  ]
+}

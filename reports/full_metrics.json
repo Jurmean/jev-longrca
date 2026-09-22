@@ -1,0 +1,116 @@
+{
+  "protocol": {
+    "protocol": "jev-choice-recall-v1",
+    "model": "jev-1.13.0",
+    "chunk_bytes": 44000,
+    "piece_bytes": 16000,
+    "task_bytes": 6000,
+    "outcome_bytes": 8000,
+    "recall_k": 3,
+    "final_group_size": 8,
+    "evidence_bytes": 2400,
+    "neighbor_bytes": 500,
+    "handoff_bytes": 1600
+  },
+  "dataset_revision": "9f45acb66948d5d20c663b4ce4ec8ea5ab0076dd",
+  "evaluated_n": 1140,
+  "overall": {
+    "n": 1140,
+    "role_correct": 0.4456140350877193,
+    "step_exact": 0.14298245614035088,
+    "step_within_5": 0.28157894736842104,
+    "valid_role": 1.0,
+    "valid_step": 1.0,
+    "valid_output_root_mae": 46.64824561403509,
+    "source_weighted_valid_output_root_mae": 46.64824561403509
+  },
+  "by_source": {
+    "swe_bench_pro": {
+      "n": 128,
+      "role_correct": 0.3125,
+      "step_exact": 0.109375,
+      "step_within_5": 0.2109375,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 72.3671875
+    },
+    "terminal_bench_2": {
+      "n": 42,
+      "role_correct": 0.4523809523809524,
+      "step_exact": 0.2857142857142857,
+      "step_within_5": 0.38095238095238093,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 71.54761904761905
+    },
+    "travelplanner": {
+      "n": 685,
+      "role_correct": 0.39416058394160586,
+      "step_exact": 0.10364963503649635,
+      "step_within_5": 0.24525547445255474,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 53.262773722627735
+    },
+    "vitabench": {
+      "n": 108,
+      "role_correct": 0.8240740740740741,
+      "step_exact": 0.2777777777777778,
+      "step_within_5": 0.4444444444444444,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 13.722222222222221
+    },
+    "webarena_verified": {
+      "n": 177,
+      "role_correct": 0.5084745762711864,
+      "step_exact": 0.2033898305084746,
+      "step_within_5": 0.3502824858757062,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 16.63276836158192
+    }
+  },
+  "by_method": {
+    "full_context": {
+      "n": 96,
+      "role_correct": 0.8229166666666666,
+      "step_exact": 0.3229166666666667,
+      "step_within_5": 0.5208333333333334,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 10.114583333333334
+    },
+    "segmented_choice": {
+      "n": 1044,
+      "role_correct": 0.4109195402298851,
+      "step_exact": 0.12643678160919541,
+      "step_within_5": 0.2595785440613027,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 50.00766283524904
+    }
+  },
+  "successful_api_calls": 9901,
+  "input_tokens": 120872402,
+  "estimated_input_cost_usd": 5.076640884000001,
+  "cost_note": "Full totals include 200 reused mini cases; new_* excludes their already-paid calls. Public-price estimate, not a bill.",
+  "run_wall_seconds": 422.1180698289536,
+  "reused_mini_n": 200,
+  "new_trajectory_n": 940,
+  "failed_n": 0,
+  "reused_input_tokens": 25602818,
+  "new_input_tokens": 95269584,
+  "new_estimated_input_cost_usd": 4.001322528,
+  "stage_recall": {
+    "n": 1044,
+    "recall_candidates": 655,
+    "expanded_candidates": 671,
+    "final_candidates": 462,
+    "exact": 132
+  },
+  "random_expected": {
+    "role": 0.22201127819548871,
+    "exact": 0.010350438813089393
+  }
+}

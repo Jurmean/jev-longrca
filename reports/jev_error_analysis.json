@@ -1,0 +1,318 @@
+{
+  "scope": "Frozen JEV Full; benchmark references, zero-based step IDs; no new inference",
+  "protocol": {
+    "protocol": "jev-choice-recall-v1",
+    "model": "jev-1.13.0",
+    "chunk_bytes": 44000,
+    "piece_bytes": 16000,
+    "task_bytes": 6000,
+    "outcome_bytes": 8000,
+    "recall_k": 3,
+    "final_group_size": 8,
+    "evidence_bytes": 2400,
+    "neighbor_bytes": 500,
+    "handoff_bytes": 1600
+  },
+  "dataset_revision": "9f45acb66948d5d20c663b4ce4ec8ea5ab0076dd",
+  "n": 1140,
+  "root_errors": 977,
+  "stage_counts": {
+    "reduction_drop": 209,
+    "final_wrong": 330,
+    "recall_miss": 373,
+    "correct": 163,
+    "direct_wrong": 65
+  },
+  "gold_unavailable_before_final": 582,
+  "gold_available_but_wrong": 395,
+  "segmented_funnel": {
+    "n": 1044,
+    "recall_candidates": 655,
+    "expanded_candidates": 671,
+    "final_candidates": 462,
+    "correct": 132
+  },
+  "direct": {
+    "n": 96,
+    "correct": 31
+  },
+  "root_error_direction": {
+    "early": 517,
+    "late": 460
+  },
+  "near_errors_within_5": 158,
+  "joint": {
+    "role_False_root_False": 592,
+    "role_True_root_False": 385,
+    "role_False_root_True": 40,
+    "role_True_root_True": 123
+  },
+  "by_source": {
+    "swe_bench_pro": {
+      "n": 128,
+      "stage_counts": {
+        "reduction_drop": 61,
+        "final_wrong": 40,
+        "recall_miss": 13,
+        "correct": 14
+      },
+      "role_correct": 40,
+      "step_exact": 14,
+      "step_within_5": 27
+    },
+    "terminal_bench_2": {
+      "n": 42,
+      "stage_counts": {
+        "final_wrong": 7,
+        "reduction_drop": 12,
+        "recall_miss": 11,
+        "correct": 12
+      },
+      "role_correct": 19,
+      "step_exact": 12,
+      "step_within_5": 16
+    },
+    "travelplanner": {
+      "n": 685,
+      "stage_counts": {
+        "recall_miss": 273,
+        "final_wrong": 217,
+        "correct": 71,
+        "reduction_drop": 112,
+        "direct_wrong": 12
+      },
+      "role_correct": 270,
+      "step_exact": 71,
+      "step_within_5": 168
+    },
+    "vitabench": {
+      "n": 108,
+      "stage_counts": {
+        "direct_wrong": 52,
+        "recall_miss": 25,
+        "correct": 30,
+        "final_wrong": 1
+      },
+      "role_correct": 89,
+      "step_exact": 30,
+      "step_within_5": 48
+    },
+    "webarena_verified": {
+      "n": 177,
+      "stage_counts": {
+        "final_wrong": 65,
+        "recall_miss": 51,
+        "reduction_drop": 24,
+        "correct": 36,
+        "direct_wrong": 1
+      },
+      "role_correct": 90,
+      "step_exact": 36,
+      "step_within_5": 62
+    }
+  },
+  "role_confusions": [
+    {
+      "reference": "diagnostagent",
+      "prediction": "actionagent",
+      "n": 70
+    },
+    {
+      "reference": "action_expert",
+      "prediction": "task_planner",
+      "n": 37
+    },
+    {
+      "reference": "stay_agent",
+      "prediction": "manager_agent",
+      "n": 36
+    },
+    {
+      "reference": "task_planner",
+      "prediction": "manager_agent",
+      "n": 29
+    },
+    {
+      "reference": "task_planner",
+      "prediction": "stay_agent",
+      "n": 26
+    },
+    {
+      "reference": "manager_agent",
+      "prediction": "stay_agent",
+      "n": 26
+    },
+    {
+      "reference": "stay_agent",
+      "prediction": "verifier_agent",
+      "n": 22
+    },
+    {
+      "reference": "transport_agent",
+      "prediction": "stay_agent",
+      "n": 22
+    },
+    {
+      "reference": "task_planner",
+      "prediction": "transport_agent",
+      "n": 21
+    },
+    {
+      "reference": "transport_agent",
+      "prediction": "manager_agent",
+      "n": 21
+    },
+    {
+      "reference": "verifier_agent",
+      "prediction": "stay_agent",
+      "n": 20
+    },
+    {
+      "reference": "computer_terminal",
+      "prediction": "action_expert",
+      "n": 19
+    },
+    {
+      "reference": "computer_terminal",
+      "prediction": "stay_agent",
+      "n": 18
+    },
+    {
+      "reference": "stay_agent",
+      "prediction": "food_attr_agent",
+      "n": 18
+    },
+    {
+      "reference": "diagnostagent",
+      "prediction": "judgeagent",
+      "n": 17
+    },
+    {
+      "reference": "food_attr_agent",
+      "prediction": "stay_agent",
+      "n": 16
+    },
+    {
+      "reference": "task_planner",
+      "prediction": "action_expert",
+      "n": 15
+    },
+    {
+      "reference": "transport_agent",
+      "prediction": "food_attr_agent",
+      "n": 12
+    },
+    {
+      "reference": "food_attr_agent",
+      "prediction": "manager_agent",
+      "n": 12
+    },
+    {
+      "reference": "verification_expert",
+      "prediction": "task_planner",
+      "n": 12
+    }
+  ],
+  "case_reduction_trace": {
+    "swe_bench_pro__026": [
+      {
+        "log": "results/full/calls/swe_bench_pro__026/reduce_00_008.json",
+        "gold": 31,
+        "kept": [
+          90,
+          31,
+          112
+        ],
+        "answer": {
+          "type": "choice",
+          "choice": "90",
+          "confidence": 0.7,
+          "probabilities": {
+            "58": 0.01,
+            "112": 0.06,
+            "31": 0.15,
+            "101": 0.0,
+            "42": 0.01,
+            "59": 0.01,
+            "54": 0.02,
+            "90": 0.74
+          }
+        }
+      },
+      {
+        "log": "results/full/calls/swe_bench_pro__026/reduce_01_000.json",
+        "gold": 31,
+        "kept": [
+          90,
+          127,
+          112
+        ],
+        "answer": {
+          "type": "choice",
+          "choice": "90",
+          "confidence": 0.83,
+          "probabilities": {
+            "6": 0.01,
+            "112": 0.04,
+            "31": 0.02,
+            "28": 0.0,
+            "127": 0.06,
+            "29": 0.01,
+            "128": 0.02,
+            "90": 0.84
+          }
+        }
+      }
+    ],
+    "terminal_bench_2__016": [
+      {
+        "log": "results/full/calls/terminal_bench_2__016/reduce_00_032.json",
+        "gold": 398,
+        "kept": [
+          398,
+          360,
+          361
+        ],
+        "answer": {
+          "type": "choice",
+          "choice": "398",
+          "confidence": 0.87,
+          "probabilities": {
+            "430": 0.01,
+            "361": 0.02,
+            "398": 0.89,
+            "410": 0.0,
+            "404": 0.01,
+            "411": 0.01,
+            "403": 0.0,
+            "360": 0.06
+          }
+        }
+      },
+      {
+        "log": "results/full/calls/terminal_bench_2__016/reduce_01_008.json",
+        "gold": 398,
+        "kept": [
+          340,
+          244,
+          435
+        ],
+        "answer": {
+          "type": "choice",
+          "choice": "340",
+          "confidence": 0.4,
+          "probabilities": {
+            "398": 0.01,
+            "311": 0.09,
+            "273": 0.07,
+            "361": 0.02,
+            "244": 0.18,
+            "360": 0.03,
+            "340": 0.47,
+            "435": 0.13
+          }
+        }
+      }
+    ]
+  }
+}

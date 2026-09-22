@@ -1,0 +1,9 @@
+# Laya runtime. Tested on Linux x86_64 with Python 3.11.15.
+# For the exact CUDA 12.4 environment use requirements-lock-cu124.txt.
+# JEV-only evaluation needs no third-party packages (requirements-jev.txt).
+torch==2.6.0
+transformers==5.0.0
+numpy==2.4.6
+safetensors==0.8.0
+tokenizers==0.22.2
+huggingface-hub==1.32.0
