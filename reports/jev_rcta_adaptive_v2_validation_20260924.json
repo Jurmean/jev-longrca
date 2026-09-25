@@ -1,0 +1,52 @@
+{
+  "protocol": "jev-rcta-adaptive-v2",
+  "validated_unix": 1790234189.703075,
+  "unit_tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "run": 88,
+    "passed": 83,
+    "skipped": 5,
+    "failed": 0,
+    "new_v2_tests": 15,
+    "skip_reason": "Laya isolated inference environment unavailable"
+  },
+  "offline_audit": {
+    "trajectories": 200,
+    "api_calls": 0,
+    "primary_text_coverage": "lossless",
+    "all_segments_reachable": true
+  },
+  "source_sha256": {
+    "evaluate.py": "833a0292826c286b18118bb190fa190bc5ee160bb393169f84180b6e0c5d967f",
+    "jev_rcta_client.py": "7f9c9c36169d43c3aa277e34c53356c51161e2b06868f138007324f4323fb42d",
+    "rcta_choice_policy.py": "44c9c3a07ede92972723fc9cbb2bbc983e2e33b2b960dabda08778e319a36805",
+    "rcta_evidence.py": "f0dfe0412bd8fe97ceb0d77bc484cd7b48019ed0b9dee732c219fa8f515b12f5",
+    "jev_rcta_adaptive.py": "a22ad935916dbbe56b84eb174baafc1d59ba7fd54e39b598dd85ab4ee5998f30",
+    "evaluate_jev_rcta_adaptive.py": "57968695e88285a3b65ea3478e5bb3ea7eac3bbbb5ad54b1e908468b915ccd95",
+    "rcta_demo.py": "dbb168eb6f11e2d09c15d026564591701e08cafa757f48d3aef1076a9e633483",
+    "rcta_directory.py": "71c513a00f59c89192225cca470d574eb07022ef34612e80525c2679a515606f",
+    "jev_rcta_adaptive_v2.py": "3bbac51a42ad01822f3ff4a946db82d43f04814bcb312b5b77cf33a76e7cd41f",
+    "evaluate_jev_rcta_adaptive_v2.py": "ab1e24d88d6cb479e6a5ec5b8987bd15f515e82546efb8eda3e9aeb1255e6ac5",
+    "run_jev_rcta_adaptive_mini.py": "3ed431387572c8960ac06c4ba6f9f2b2508263f81cf73630b703d1bd44efc86e"
+  },
+  "inference_unchanged_between_offline_and_live_checks": true,
+  "live_validation": {
+    "completed": 6,
+    "point_predictions": 5,
+    "supported": 0,
+    "successful_responses_including_controls": 93,
+    "input_tokens_including_controls": 325143,
+    "output_tokens_including_controls": 14014,
+    "metrics": {
+      "n": 6,
+      "role_correct": 0.16666666666666666,
+      "step_exact": 0.3333333333333333,
+      "step_within_5": 0.5,
+      "valid_role": 0.5,
+      "valid_step": 0.8333333333333334,
+      "valid_output_root_mae": 22.6
+    }
+  },
+  "v1_run_remained_stopped": true,
+  "note": "Small selected diagnostic sample; no claim of benchmark improvement or full Mini validation."
+}

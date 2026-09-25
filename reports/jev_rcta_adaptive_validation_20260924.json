@@ -1,0 +1,81 @@
+{
+  "protocol": "jev-rcta-adaptive-v1",
+  "jev_api_calls": 0,
+  "tests": {
+    "tests_run": 70,
+    "passed": 65,
+    "failures": 0,
+    "errors": 0,
+    "skipped": [
+      {
+        "test": "test_client_refuses_truncation_before_forward (test_laya.LayaTests)",
+        "reason": "Laya tests require the isolated inference environment"
+      },
+      {
+        "test": "test_lossless_unicode_recall_and_option_limits (test_laya.LayaTests)",
+        "reason": "Laya tests require the isolated inference environment"
+      },
+      {
+        "test": "test_no_hidden_header_or_state_truncation (test_laya.LayaTests)",
+        "reason": "Laya tests require the isolated inference environment"
+      },
+      {
+        "test": "test_reject_long_option_text (test_laya.LayaTests)",
+        "reason": "Laya tests require the isolated inference environment"
+      },
+      {
+        "test": "test_singleton_and_cache_are_not_model_calls (test_laya.LayaTests)",
+        "reason": "Laya tests require the isolated inference environment"
+      }
+    ],
+    "jev_api_calls": 0,
+    "scope": "Offline tests; HTTP is mocked in transport tests. Synthetic responses are not model measurements."
+  },
+  "data_audit": {
+    "api_calls": 0,
+    "trajectories": 200,
+    "primary_text_coverage": "lossless",
+    "segments": 2605,
+    "cases_exceeding_scan_call_reserve": 1,
+    "budget_note": "One logical call per segment before search. Other byte/token budgets also apply; incomplete scan yields abstention, never a verified prediction."
+  },
+  "coarse_scan_comparison": {
+    "initial_segments": 8547,
+    "final_segments": 2605,
+    "fine_grained_evidence_unchanged": true,
+    "note": "Offline count comparison only, not measured API cost or accuracy."
+  },
+  "synthetic_demo": {
+    "predicted_step": 1,
+    "predicted_role": "Planner",
+    "decision_status": "supported",
+    "logical_scripted_calls": 11,
+    "actions": [
+      "inspect",
+      "upstream",
+      "inspect",
+      "repair",
+      "upstream",
+      "repair",
+      "challenge",
+      "challenge",
+      "backtrack"
+    ]
+  },
+  "source_sha256": {
+    "evaluate.py": "833a0292826c286b18118bb190fa190bc5ee160bb393169f84180b6e0c5d967f",
+    "jev_rcta_client.py": "7f9c9c36169d43c3aa277e34c53356c51161e2b06868f138007324f4323fb42d",
+    "rcta_choice_policy.py": "44c9c3a07ede92972723fc9cbb2bbc983e2e33b2b960dabda08778e319a36805",
+    "rcta_evidence.py": "f0dfe0412bd8fe97ceb0d77bc484cd7b48019ed0b9dee732c219fa8f515b12f5",
+    "jev_rcta_adaptive.py": "a22ad935916dbbe56b84eb174baafc1d59ba7fd54e39b598dd85ab4ee5998f30",
+    "evaluate_jev_rcta_adaptive.py": "3eabc93ec20fe2dc0d10f5132746271021bbf888f82a241568c00d7f04311325",
+    "rcta_demo.py": "dbb168eb6f11e2d09c15d026564591701e08cafa757f48d3aef1076a9e633483"
+  },
+  "figure": "figures/jev-rcta-adaptive-main.png",
+  "limitations": [
+    "No live JEV evaluation performed",
+    "Default thresholds uncalibrated",
+    "Heuristic question selection, not exact EC2",
+    "Long cases can exceed a budget and abstain"
+  ]
+}

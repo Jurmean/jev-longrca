@@ -1,0 +1,862 @@
+{
+  "protocol": "jev-rcta-adaptive-v1",
+  "status": "stopped_by_user",
+  "expected_n": 200,
+  "completed_n": 45,
+  "supported_n": 0,
+  "abstentions": 45,
+  "primary_metrics_completed": {
+    "n": 45,
+    "role_correct": 0.0,
+    "step_exact": 0.0,
+    "step_within_5": 0.0,
+    "valid_role": 0.0,
+    "valid_step": 0.0,
+    "valid_output_root_mae": null
+  },
+  "all_200_missing_and_abstained_counted_wrong": {
+    "n": 200,
+    "role_correct": 0.0,
+    "step_exact": 0.0,
+    "step_within_5": 0.0,
+    "valid_role": 0.0,
+    "valid_step": 0.0,
+    "valid_output_root_mae": null
+  },
+  "answered_subset_metrics": {
+    "n": 0,
+    "role_correct": null,
+    "step_exact": null,
+    "step_within_5": null,
+    "valid_role": null,
+    "valid_step": null,
+    "valid_output_root_mae": null
+  },
+  "tentative_diagnostic_only": {
+    "n": 45,
+    "role_correct": 0.06666666666666667,
+    "step_exact": 0.044444444444444446,
+    "step_within_5": 0.06666666666666667,
+    "valid_role": 0.06666666666666667,
+    "valid_step": 0.06666666666666667,
+    "valid_output_root_mae": 0.6666666666666666
+  },
+  "matched_baselines": {
+    "JEV baseline": {
+      "n": 45,
+      "role_correct": 0.3111111111111111,
+      "step_exact": 0.13333333333333333,
+      "step_within_5": 0.3333333333333333,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 48.77777777777778
+    },
+    "JEV-RCTA v2": {
+      "n": 45,
+      "role_correct": 0.24444444444444444,
+      "step_exact": 0.13333333333333333,
+      "step_within_5": 0.35555555555555557,
+      "valid_role": 1.0,
+      "valid_step": 1.0,
+      "valid_output_root_mae": 52.46666666666667
+    }
+  },
+  "candidate_recall": {
+    "recall_candidates": 0.9555555555555556,
+    "expanded_candidates": 0.9555555555555556,
+    "final_candidates": 0.9555555555555556
+  },
+  "decision_reasons": {
+    "input_token_budget": 33,
+    "final_context_ambiguity": 9,
+    "incomplete_evidence_checks": 2,
+    "uncertain_final_choice": 1
+  },
+  "stop_reasons": {
+    "input_token_budget": 33,
+    "round_budget": 11,
+    "frontier_exhausted": 1
+  },
+  "calls_by_phase": {
+    "scan": 946,
+    "inspect": 339,
+    "upstream": 161,
+    "challenge": 46,
+    "repair": 26,
+    "reduce": 27,
+    "expand": 2,
+    "final": 3,
+    "verify": 3
+  },
+  "execution_diagnostics": {
+    "by_reason": {
+      "final_context_ambiguity": {
+        "n": 9,
+        "mean_calls": 37.666666666666664,
+        "mean_input_tokens": 256012.77777777778,
+        "mean_initial_candidates": 43.77777777777778,
+        "mean_fully_checked_nodes": 0,
+        "incomplete_scan_n": 0
+      },
+      "incomplete_evidence_checks": {
+        "n": 2,
+        "mean_calls": 29.5,
+        "mean_input_tokens": 141297.5,
+        "mean_initial_candidates": 8,
+        "mean_fully_checked_nodes": 0,
+        "incomplete_scan_n": 0
+      },
+      "input_token_budget": {
+        "n": 33,
+        "mean_calls": 33.333333333333336,
+        "mean_input_tokens": 304944.3333333333,
+        "mean_initial_candidates": 77.51515151515152,
+        "mean_fully_checked_nodes": 0,
+        "incomplete_scan_n": 12
+      },
+      "uncertain_final_choice": {
+        "n": 1,
+        "mean_calls": 11,
+        "mean_input_tokens": 32200,
+        "mean_initial_candidates": 2,
+        "mean_fully_checked_nodes": 2,
+        "incomplete_scan_n": 0
+      }
+    },
+    "per_case": {
+      "swe_bench_pro__008": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 62,
+        "search_nodes": 62,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 308093,
+        "input_tokens": 308093,
+        "api_calls": 26
+      },
+      "swe_bench_pro__009": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 73,
+        "search_nodes": 73,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 15,
+          "upstream": 3,
+          "challenge": 2
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 216558,
+        "input_tokens": 303935,
+        "api_calls": 39
+      },
+      "swe_bench_pro__010": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 74,
+        "search_nodes": 74,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 302426,
+        "input_tokens": 302426,
+        "api_calls": 27
+      },
+      "swe_bench_pro__012": {
+        "decision_reason": "final_context_ambiguity",
+        "complete_scan": true,
+        "initial_candidates": 36,
+        "search_nodes": 36,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 11,
+          "upstream": 11,
+          "challenge": 1,
+          "repair": 1
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 115543,
+        "input_tokens": 253319,
+        "api_calls": 38
+      },
+      "swe_bench_pro__013": {
+        "decision_reason": "final_context_ambiguity",
+        "complete_scan": true,
+        "initial_candidates": 37,
+        "search_nodes": 37,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 11,
+          "upstream": 5,
+          "repair": 3,
+          "challenge": 5
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 93845,
+        "input_tokens": 242819,
+        "api_calls": 35
+      },
+      "swe_bench_pro__018": {
+        "decision_reason": "final_context_ambiguity",
+        "complete_scan": true,
+        "initial_candidates": 70,
+        "search_nodes": 70,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 20,
+          "upstream": 4
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 166975,
+        "input_tokens": 303594,
+        "api_calls": 44
+      },
+      "swe_bench_pro__019": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 64,
+        "search_nodes": 64,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 22,
+          "repair": 2
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 201867,
+        "input_tokens": 313484,
+        "api_calls": 45
+      },
+      "swe_bench_pro__024": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 89,
+        "search_nodes": 89,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 308212,
+        "input_tokens": 308212,
+        "api_calls": 28
+      },
+      "swe_bench_pro__025": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 64,
+        "search_nodes": 64,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 16,
+          "upstream": 5,
+          "challenge": 2
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 201568,
+        "input_tokens": 300275,
+        "api_calls": 43
+      },
+      "swe_bench_pro__033": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 91,
+        "search_nodes": 91,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 4,
+          "upstream": 2
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 279062,
+        "input_tokens": 302898,
+        "api_calls": 33
+      },
+      "swe_bench_pro__034": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 71,
+        "search_nodes": 71,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 11,
+          "upstream": 8
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 217828,
+        "input_tokens": 304152,
+        "api_calls": 38
+      },
+      "swe_bench_pro__035": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 45,
+        "search_nodes": 45,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 14,
+          "upstream": 9,
+          "repair": 1
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 172161,
+        "input_tokens": 316973,
+        "api_calls": 41
+      },
+      "swe_bench_pro__036": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 69,
+        "search_nodes": 69,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 7,
+          "upstream": 3
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 260099,
+        "input_tokens": 301122,
+        "api_calls": 33
+      },
+      "swe_bench_pro__039": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 77,
+        "search_nodes": 77,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 307258,
+        "input_tokens": 307258,
+        "api_calls": 27
+      },
+      "swe_bench_pro__044": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 78,
+        "search_nodes": 78,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 303500,
+        "input_tokens": 303500,
+        "api_calls": 27
+      },
+      "swe_bench_pro__047": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 83,
+        "search_nodes": 83,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 10
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 269507,
+        "input_tokens": 301625,
+        "api_calls": 36
+      },
+      "swe_bench_pro__048": {
+        "decision_reason": "final_context_ambiguity",
+        "complete_scan": true,
+        "initial_candidates": 48,
+        "search_nodes": 48,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 13,
+          "upstream": 11
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 159734,
+        "input_tokens": 302777,
+        "api_calls": 42
+      },
+      "swe_bench_pro__049": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 44,
+        "search_nodes": 44,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 11,
+          "upstream": 7,
+          "repair": 1,
+          "challenge": 4,
+          "expand": 1
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 159334,
+        "input_tokens": 306046,
+        "api_calls": 40
+      },
+      "swe_bench_pro__054": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 94,
+        "search_nodes": 94,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 5,
+          "upstream": 4
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 264072,
+        "input_tokens": 303830,
+        "api_calls": 32
+      },
+      "swe_bench_pro__057": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 82,
+        "search_nodes": 82,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 307969,
+        "input_tokens": 307969,
+        "api_calls": 28
+      },
+      "swe_bench_pro__058": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 55,
+        "search_nodes": 55,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 12,
+          "upstream": 12
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 197514,
+        "input_tokens": 304025,
+        "api_calls": 42
+      },
+      "swe_bench_pro__065": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 92,
+        "search_nodes": 92,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 4,
+          "upstream": 2
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 280679,
+        "input_tokens": 304861,
+        "api_calls": 32
+      },
+      "swe_bench_pro__068": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 52,
+        "search_nodes": 52,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 5,
+          "upstream": 2
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 274967,
+        "input_tokens": 302097,
+        "api_calls": 30
+      },
+      "swe_bench_pro__070": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 77,
+        "search_nodes": 77,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 7,
+          "upstream": 1
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 274577,
+        "input_tokens": 302539,
+        "api_calls": 30
+      },
+      "swe_bench_pro__071": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 61,
+        "search_nodes": 61,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 9,
+          "upstream": 6
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 241229,
+        "input_tokens": 304080,
+        "api_calls": 35
+      },
+      "swe_bench_pro__074": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 96,
+        "search_nodes": 96,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 305964,
+        "input_tokens": 305964,
+        "api_calls": 26
+      },
+      "swe_bench_pro__076": {
+        "decision_reason": "final_context_ambiguity",
+        "complete_scan": true,
+        "initial_candidates": 72,
+        "search_nodes": 72,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 17,
+          "upstream": 7
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 142814,
+        "input_tokens": 304885,
+        "api_calls": 41
+      },
+      "swe_bench_pro__084": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 100,
+        "search_nodes": 100,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 303120,
+        "input_tokens": 303120,
+        "api_calls": 25
+      },
+      "swe_bench_pro__094": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 53,
+        "search_nodes": 53,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 11,
+          "upstream": 7
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 218452,
+        "input_tokens": 304092,
+        "api_calls": 37
+      },
+      "swe_bench_pro__095": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 97,
+        "search_nodes": 97,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 300633,
+        "input_tokens": 300633,
+        "api_calls": 31
+      },
+      "swe_bench_pro__096": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 70,
+        "search_nodes": 70,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 303204,
+        "input_tokens": 303204,
+        "api_calls": 26
+      },
+      "swe_bench_pro__104": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 89,
+        "search_nodes": 89,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 16,
+          "upstream": 5
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 233259,
+        "input_tokens": 302162,
+        "api_calls": 45
+      },
+      "swe_bench_pro__105": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 86,
+        "search_nodes": 86,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 310031,
+        "input_tokens": 310031,
+        "api_calls": 28
+      },
+      "swe_bench_pro__112": {
+        "decision_reason": "final_context_ambiguity",
+        "complete_scan": true,
+        "initial_candidates": 39,
+        "search_nodes": 39,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 10,
+          "upstream": 4,
+          "repair": 4,
+          "challenge": 6
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 125782,
+        "input_tokens": 268709,
+        "api_calls": 39
+      },
+      "swe_bench_pro__114": {
+        "decision_reason": "final_context_ambiguity",
+        "complete_scan": true,
+        "initial_candidates": 30,
+        "search_nodes": 30,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 11,
+          "challenge": 9,
+          "upstream": 4
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 84315,
+        "input_tokens": 235183,
+        "api_calls": 34
+      },
+      "swe_bench_pro__115": {
+        "decision_reason": "final_context_ambiguity",
+        "complete_scan": true,
+        "initial_candidates": 41,
+        "search_nodes": 41,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 16,
+          "repair": 1,
+          "upstream": 6,
+          "challenge": 1
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 112285,
+        "input_tokens": 253606,
+        "api_calls": 36
+      },
+      "swe_bench_pro__116": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 94,
+        "search_nodes": 94,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 310801,
+        "input_tokens": 310801,
+        "api_calls": 32
+      },
+      "swe_bench_pro__121": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 84,
+        "search_nodes": 84,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 15,
+          "upstream": 4,
+          "repair": 1
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 227152,
+        "input_tokens": 305173,
+        "api_calls": 43
+      },
+      "swe_bench_pro__124": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": false,
+        "initial_candidates": 102,
+        "search_nodes": 102,
+        "fully_checked_nodes": 0,
+        "search_actions": {},
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 305159,
+        "input_tokens": 305159,
+        "api_calls": 28
+      },
+      "swe_bench_pro__125": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 83,
+        "search_nodes": 83,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 7,
+          "upstream": 4
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 257387,
+        "input_tokens": 300782,
+        "api_calls": 37
+      },
+      "terminal_bench_2__001": {
+        "decision_reason": "input_token_budget",
+        "complete_scan": true,
+        "initial_candidates": 107,
+        "search_nodes": 107,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 3
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 292377,
+        "input_tokens": 302642,
+        "api_calls": 30
+      },
+      "terminal_bench_2__003": {
+        "decision_reason": "incomplete_evidence_checks",
+        "complete_scan": true,
+        "initial_candidates": 9,
+        "search_nodes": 9,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 7,
+          "upstream": 4,
+          "challenge": 8,
+          "repair": 5
+        },
+        "tentative_missing_checks": [
+          "upstream",
+          "repair",
+          "challenge"
+        ],
+        "scan_input_tokens": 26271,
+        "input_tokens": 139964,
+        "api_calls": 29
+      },
+      "travelplanner__606": {
+        "decision_reason": "final_context_ambiguity",
+        "complete_scan": true,
+        "initial_candidates": 21,
+        "search_nodes": 21,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 11,
+          "upstream": 12,
+          "repair": 1
+        },
+        "tentative_missing_checks": null,
+        "scan_input_tokens": 34709,
+        "input_tokens": 139223,
+        "api_calls": 30
+      },
+      "vitabench__089": {
+        "decision_reason": "uncertain_final_choice",
+        "complete_scan": true,
+        "initial_candidates": 2,
+        "search_nodes": 2,
+        "fully_checked_nodes": 2,
+        "search_actions": {
+          "inspect": 2,
+          "upstream": 2,
+          "repair": 2,
+          "challenge": 2
+        },
+        "tentative_missing_checks": [],
+        "scan_input_tokens": 3823,
+        "input_tokens": 32200,
+        "api_calls": 11
+      },
+      "webarena_verified__092": {
+        "decision_reason": "incomplete_evidence_checks",
+        "complete_scan": true,
+        "initial_candidates": 7,
+        "search_nodes": 7,
+        "fully_checked_nodes": 0,
+        "search_actions": {
+          "inspect": 6,
+          "upstream": 7,
+          "challenge": 6,
+          "repair": 4,
+          "expand": 1
+        },
+        "tentative_missing_checks": [
+          "upstream",
+          "challenge"
+        ],
+        "scan_input_tokens": 35744,
+        "input_tokens": 142631,
+        "api_calls": 30
+      }
+    }
+  },
+  "accounting": {
+    "successful_responses": 1554,
+    "input_tokens": 13156546,
+    "output_tokens": 560167,
+    "successful_request_network_attempts": 1554,
+    "control_responses": 1,
+    "control_input_tokens": 329,
+    "control_output_tokens": 31,
+    "reported_cost_usd": null,
+    "retry_events": 0,
+    "note": "Includes controls and successful calls in unfinished cases. Unknown-response failures may be charged; no price or account balance inferred."
+  },
+  "by_source": {
+    "swe_bench_pro": {
+      "n": 40,
+      "role_correct": 0.0,
+      "step_exact": 0.0,
+      "step_within_5": 0.0,
+      "valid_role": 0.0,
+      "valid_step": 0.0,
+      "valid_output_root_mae": null
+    },
+    "terminal_bench_2": {
+      "n": 2,
+      "role_correct": 0.0,
+      "step_exact": 0.0,
+      "step_within_5": 0.0,
+      "valid_role": 0.0,
+      "valid_step": 0.0,
+      "valid_output_root_mae": null
+    },
+    "travelplanner": {
+      "n": 1,
+      "role_correct": 0.0,
+      "step_exact": 0.0,
+      "step_within_5": 0.0,
+      "valid_role": 0.0,
+      "valid_step": 0.0,
+      "valid_output_root_mae": null
+    },
+    "vitabench": {
+      "n": 1,
+      "role_correct": 0.0,
+      "step_exact": 0.0,
+      "step_within_5": 0.0,
+      "valid_role": 0.0,
+      "valid_step": 0.0,
+      "valid_output_root_mae": null
+    },
+    "webarena_verified": {
+      "n": 1,
+      "role_correct": 0.0,
+      "step_exact": 0.0,
+      "step_within_5": 0.0,
+      "valid_role": 0.0,
+      "valid_step": 0.0,
+      "valid_output_root_mae": null
+    }
+  },
+  "audit": {
+    "frozen_sources": "passed",
+    "raw_request_hashes": "passed",
+    "model_and_endpoint": "passed",
+    "prediction_history_hashes": "passed",
+    "token_and_call_counts": "passed",
+    "evidence_pointers": "passed"
+  },
+  "note": "Defaults are uncalibrated and unchanged. Tentative predictions are diagnostics, not official outputs. A partial run does not establish full Mini performance."
+}

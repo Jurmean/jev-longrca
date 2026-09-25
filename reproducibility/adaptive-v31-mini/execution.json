@@ -1,0 +1,15 @@
+{
+  "protocol": "jev-rcta-adaptive-v3.1",
+  "requested_n": 200,
+  "source_files_archived": 15,
+  "recorded_unix": 1790237661.1917021,
+  "source_validation": "matches previously tested v3.1",
+  "selection": "official full Mini; no development predictions reused",
+  "quota_policy": "stop immediately on insufficient balance",
+  "inference_config_unchanged": true,
+  "status": "stopped_by_user",
+  "completed_n": 100,
+  "stopped_unix": 1790240242.8611946,
+  "stop_reason": "User explicitly cancelled Mini evaluation; do not resume automatically",
+  "successful_saved_responses": 1253
+}

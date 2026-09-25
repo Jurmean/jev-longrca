@@ -11,6 +11,20 @@ REPORTS = [
     "full_report.md", "full_metrics.json", "full_predictions.csv", "full_result_audit.json", "full_timing_audit.json",
     "laya_full_report.md", "laya_full_metrics.json", "laya_full_predictions.csv", "laya_result_audit.json",
     "laya_download_manifest.json", "laya_environment.txt", "laya_diagnostics.json", "laya_sanity_checks.json",
+    "jev_rcta_literature_design_20260924.md",
+    "jev_rcta_v3_literature_20260924.md",
+    "jev_rcta_adaptive_mini_20260924_report.md", "jev_rcta_adaptive_mini_20260924_metrics.json",
+    "jev_rcta_adaptive_mini_20260924_predictions.csv", "jev_rcta_adaptive_tests_20260924.json",
+    "jev_rcta_adaptive_validation_20260924.json",
+    "jev_rcta_adaptive_v2_smoke_20260924_report.md", "jev_rcta_adaptive_v2_smoke_20260924_metrics.json",
+    "jev_rcta_adaptive_v2_optimization_20260924_report.md", "jev_rcta_adaptive_v2_optimization_20260924_metrics.json",
+    "jev_rcta_adaptive_v2_validation_20260924.json",
+    "jev_rcta_adaptive_v3_20260924_report.md", "jev_rcta_adaptive_v3_20260924_metrics.json",
+    "jev_rcta_adaptive_v3_tests_20260924.json", "jev_rcta_adaptive_v31_tests_20260924.json",
+    "jev_rcta_adaptive_v31_regression_20260924_report.md", "jev_rcta_adaptive_v31_regression_20260924_metrics.json",
+    "jev_rcta_adaptive_v31_validation_20260924.json",
+    "jev_rcta_adaptive_v31_mini_20260924_report.md", "jev_rcta_adaptive_v31_mini_20260924_metrics.json",
+    "jev_rcta_adaptive_v31_mini_20260924_predictions.csv", "jev_rcta_adaptive_v31_failure_diagnostics_20260924.json",
 ]
 SECRET_PATTERNS = [re.compile(rb"apikey_[A-Za-z0-9_-]{24,}"),
                    re.compile(rb"jv_live_[A-Za-z0-9_-]{24,}"),
@@ -27,6 +41,8 @@ def selected_paths(root):
     paths = [root / name for name in names]
     paths += sorted((root / "scripts").glob("*.py"))
     paths += sorted((root / "tests").glob("*.py"))
+    paths += sorted((root / "docs").glob("*.md"))
+    paths += sorted((root / "figures").glob("jev-rcta-adaptive-main*"))
     return paths
 
 

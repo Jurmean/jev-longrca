@@ -1,0 +1,11 @@
+Edit 1: interface and heuristic wording
+Edit this scientific architecture figure with only these targeted corrections; preserve all other panels, title, typography, spacing, colors, texts and shapes:
+1. In panel C, replace the subtext under "Discrimination / cost" with exactly "Heuristic priority per request byte". This implementation uses a heuristic, not a learned or exact expected-information computation.
+2. Correct the interface between panel C and the "JEV Choice" box below it. Currently an upward arrow from the JEV box is labeled "Request next question (with budget)", which has the wrong direction. Replace that connection with two separate clear arrows: a downward arrow from panel C to the JEV Choice box labeled "Selected question", and an upward arrow from JEV Choice to panel C labeled "Typed answer". Use the existing whitespace; avoid crossing or overlapping labels. The controller in panel C selects the next question; JEV only answers typed questions.
+3. Preserve the existing engine-to-panel-B arrow, the raw-evidence retrieval arrows, and the backtracking loop.
+No new panels, no added accuracy metrics, no additional explanatory text. Maintain the high resolution and exact layout.
+
+Edit 2: raw evidence connector
+Make exactly one local connector correction to this diagram, preserving every other pixel as closely as possible.
+At the bottom right, the blue connector labeled "Retrieve raw spans" is currently an upside-down U with both ends at the long Original-evidence store. This is wrong. Keep the RIGHT end attached to the store and keep its horizontal segment and text in place. Extend the LEFT vertical end UPWARD until it touches the bottom border of panel (C) "Budgeted question search", in the blank space to the right of the "Typed answer" arrow. Add an upward-pointing arrowhead at that contact with panel C. The result must clearly be a directed path from the store to panel C.
+Do not alter the two correct Selected question / Typed answer arrows, any text, panels, layout, colors, title, or typography. Only repair this one raw-evidence connector.

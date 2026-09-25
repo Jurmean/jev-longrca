@@ -1,0 +1,14 @@
+{
+  "run": 102,
+  "passed": 97,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 5,
+  "skip_reasons": [
+    "Laya tests require the isolated inference environment",
+    "Laya tests require the isolated inference environment",
+    "Laya tests require the isolated inference environment",
+    "Laya tests require the isolated inference environment",
+    "Laya tests require the isolated inference environment"
+  ]
+}

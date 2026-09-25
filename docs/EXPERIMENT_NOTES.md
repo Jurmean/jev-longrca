@@ -6,7 +6,31 @@
 
 使用 TypeSafe 官方 `jev-1.13.0` 在官方固定 200 条 LongRCA-Mini 上做离线失败归因。仅使用 JEV 的 Choice 接口，不调用其他生成模型，不训练、不用测试标签调参。
 
-## JEV-RCTA 实验架构
+## JEV-RCTA Adaptive：概率驱动的多轮取证
+
+最新的论文方法实验分支是 **v3.1**：按视图大小选择完整原文或 RRF/MMR 全局检索 → 结构化多轮检索反馈 → 分轮预测根因与角色 → 原文核验上下文隔离。总预算沿用 v2。入口为 `scripts/evaluate_jev_rcta_adaptive_v3.py`，见 [使用说明](../docs/ADAPTIVE_RCTA_V3.md) 和 [论文到代码的对应记录](../reports/jev_rcta_v3_literature_20260924.md)。v3 的六条实测没有整体优于 v2；v3.1 随后修复短轨迹的证据漏筛，结果分开保存，不将研究分支宣称为已证实的改进。
+
+v3.1 的单条回归定位到正确步骤，角色仍未确定、严格核验未通过；不能代替完整对照评测。见 [回归报告](../reports/jev_rcta_adaptive_v31_regression_20260924_report.md)。
+
+后续 Mini 在完成 100/200 条后按用户要求停止，不自动恢复。相同 100 条上 v3.1 根因 Exact 为 10%，历史 JEV baseline 为 20%；本版未体现性能优势，保留为负面实验。见 [Mini 停止报告](../reports/jev_rcta_adaptive_v31_mini_20260924_report.md)。
+
+当前优化版入口是 `scripts/evaluate_jev_rcta_adaptive_v2.py`：无损原文索引 → 树形目录与概率导航 → 按需读取、打标签 → 集中核验一个候选 → 预留预算做最终选择与独立核验。未探索的分支保留，点预测与已核验子集分别报告。
+
+v1 Mini 在完成 45 条、全部弃答后按用户要求停止，原结果与代码归档保留。新版减少初始扫描成本、候选分散和最终判断被预算跳过的问题；真实收益需单独验证。完整配置与输出含义见 [Adaptive v2 使用说明](../docs/ADAPTIVE_RCTA_V2.md)，[v1 文档](../docs/ADAPTIVE_RCTA.md)用于复现。先离线运行：
+
+```bash
+python3 -m unittest discover -s tests -p 'test_rcta_adaptive_v2.py' -v
+python3 scripts/evaluate_jev_rcta_adaptive_v2.py --demo --output results/jev_rcta_adaptive_v2_demo_20260924
+python3 scripts/evaluate_jev_rcta_adaptive_v2.py --audit-only --mini --output results/jev_rcta_adaptive_v2_audit_20260924
+```
+
+演示使用合成回复，不调用 JEV，也不是准确率实验。只有显式使用 `--live` 才读取 API 配置并发起真实请求；真实运行先做连接预检，保留额度耗尽即停与精确缓存恢复。默认阈值未经任务校准，不声称具有整棵搜索树的覆盖率保证。
+
+![Adaptive JEV-RCTA architecture](../figures/jev-rcta-adaptive-main.png)
+
+这张主图由 imagegen 按 v1 实现生成；v2 的目录导航、集中核验和双层输出以新版文档为准。图中日志与概率柱状图为流程示意，不是实验结果。[原始提示词](../figures/jev-rcta-adaptive-main-prompt.txt)与[局部修订提示词](../figures/jev-rcta-adaptive-main-edit-prompts.txt)一并保存。
+
+## JEV-RCTA 历史实验架构
 
 新增独立入口 `scripts/evaluate_jev_rcta.py`，方法实现在 `scripts/jev_rcta.py`。这是受 RCTA 启发的纯 JEV Choice 改造，未经训练，也不使用生成式摘要。原始 JEV、Laya 推理流程与历史结果保持原样。
 

@@ -1,0 +1,123 @@
+{
+  "protocol": "jev-rcta-adaptive-v3.1",
+  "scope": "small selected diagnostic sample; not full Mini or unbiased accuracy evidence",
+  "runs": [
+    {
+      "directory": "results/jev_rcta_adaptive_v31_regression_20260924",
+      "progress": {
+        "status": "complete",
+        "completed_n": 1,
+        "requested_n": 1,
+        "completed_ids": [
+          "vitabench__089"
+        ]
+      },
+      "accounting": {
+        "successful_responses": 20,
+        "input_tokens": 57250,
+        "output_tokens": 3678,
+        "successful_request_network_attempts": 20,
+        "control_responses": 1,
+        "control_input_tokens": 329,
+        "control_output_tokens": 31,
+        "reported_cost_usd": null,
+        "retry_events": 0,
+        "note": "Includes controls and successful calls in unfinished cases. Unknown-response failures may be charged; no price or account balance inferred."
+      }
+    }
+  ],
+  "n": 1,
+  "answered_n": 1,
+  "supported_n": 0,
+  "metrics": {
+    "n": 1,
+    "role_correct": 0.0,
+    "step_exact": 1.0,
+    "step_within_5": 1.0,
+    "valid_role": 0.0,
+    "valid_step": 1.0,
+    "valid_output_root_mae": 0
+  },
+  "answered_metrics": {
+    "n": 1,
+    "role_correct": 0.0,
+    "step_exact": 1.0,
+    "step_within_5": 1.0,
+    "valid_role": 0.0,
+    "valid_step": 1.0,
+    "valid_output_root_mae": 0
+  },
+  "verified_metrics_all_cases": {
+    "n": 1,
+    "role_correct": 0.0,
+    "step_exact": 0.0,
+    "step_within_5": 0.0,
+    "valid_role": 0.0,
+    "valid_step": 0.0,
+    "valid_output_root_mae": null
+  },
+  "matched_comparisons": {
+    "Adaptive v2": {
+      "metrics": {
+        "n": 1,
+        "role_correct": 0.0,
+        "step_exact": 0.0,
+        "step_within_5": 1.0,
+        "valid_role": 0.0,
+        "valid_step": 1.0,
+        "valid_output_root_mae": 2
+      },
+      "calls": 15,
+      "input_tokens": 42340
+    },
+    "Adaptive v3": {
+      "metrics": {
+        "n": 1,
+        "role_correct": 0.0,
+        "step_exact": 0.0,
+        "step_within_5": 0.0,
+        "valid_role": 0.0,
+        "valid_step": 0.0,
+        "valid_output_root_mae": null
+      },
+      "calls": 18,
+      "input_tokens": 46250
+    }
+  },
+  "states": {
+    "best_effort": 1
+  },
+  "case_calls": 19,
+  "case_input_tokens": 56921,
+  "case_output_tokens": 3647,
+  "audit": "frozen sources, requests, histories, usage and evidence pointers passed",
+  "cases": [
+    {
+      "question_ID": "vitabench__089",
+      "reference_step": 8,
+      "reference_role": "Action_Expert",
+      "predicted_step": 8,
+      "predicted_role": null,
+      "verified_step": null,
+      "decision_status": "best_effort",
+      "decision_reason": "point_prediction_unverified",
+      "api_calls": 19,
+      "input_tokens": 56921,
+      "output_tokens": 3647,
+      "coverage": {
+        "total_segments": 1,
+        "read_segments": 0,
+        "routing_questions": 0,
+        "pending_regions": 1,
+        "pending_leads": 0,
+        "action_spans_read": 10,
+        "full_scan": false,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality",
+        "global_retrieval_rounds": 5,
+        "excerpt_steps_presented": 10,
+        "action_segments_read": 1
+      },
+      "stop_reason": "hop_budget"
+    }
+  ]
+}

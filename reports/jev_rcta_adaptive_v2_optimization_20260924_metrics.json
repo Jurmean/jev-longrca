@@ -1,0 +1,280 @@
+{
+  "scope": "small selected diagnostic sample; not full Mini or unbiased accuracy evidence",
+  "runs": [
+    {
+      "directory": "results/jev_rcta_adaptive_v2_smoke_20260924",
+      "progress": {
+        "status": "complete",
+        "completed_n": 5,
+        "requested_n": 5,
+        "completed_ids": [
+          "swe_bench_pro__114",
+          "terminal_bench_2__003",
+          "travelplanner__606",
+          "vitabench__089",
+          "webarena_verified__092"
+        ]
+      },
+      "accounting": {
+        "successful_responses": 78,
+        "input_tokens": 269183,
+        "output_tokens": 11912,
+        "successful_request_network_attempts": 78,
+        "control_responses": 1,
+        "control_input_tokens": 329,
+        "control_output_tokens": 31,
+        "reported_cost_usd": null,
+        "retry_events": 0,
+        "note": "Includes controls and successful calls in unfinished cases. Unknown-response failures may be charged; no price or account balance inferred."
+      }
+    },
+    {
+      "directory": "results/jev_rcta_adaptive_v2_long_20260924",
+      "progress": {
+        "status": "complete",
+        "completed_n": 1,
+        "requested_n": 1,
+        "completed_ids": [
+          "swe_bench_pro__039"
+        ]
+      },
+      "accounting": {
+        "successful_responses": 15,
+        "input_tokens": 55960,
+        "output_tokens": 2102,
+        "successful_request_network_attempts": 15,
+        "control_responses": 1,
+        "control_input_tokens": 329,
+        "control_output_tokens": 31,
+        "reported_cost_usd": null,
+        "retry_events": 0,
+        "note": "Includes controls and successful calls in unfinished cases. Unknown-response failures may be charged; no price or account balance inferred."
+      }
+    }
+  ],
+  "n": 6,
+  "answered_n": 5,
+  "supported_n": 0,
+  "metrics": {
+    "n": 6,
+    "role_correct": 0.16666666666666666,
+    "step_exact": 0.3333333333333333,
+    "step_within_5": 0.5,
+    "valid_role": 0.5,
+    "valid_step": 0.8333333333333334,
+    "valid_output_root_mae": 22.6
+  },
+  "answered_metrics": {
+    "n": 5,
+    "role_correct": 0.2,
+    "step_exact": 0.4,
+    "step_within_5": 0.6,
+    "valid_role": 0.6,
+    "valid_step": 1.0,
+    "valid_output_root_mae": 22.6
+  },
+  "verified_metrics_all_cases": {
+    "n": 6,
+    "role_correct": 0.0,
+    "step_exact": 0.0,
+    "step_within_5": 0.0,
+    "valid_role": 0.0,
+    "valid_step": 0.0,
+    "valid_output_root_mae": null
+  },
+  "matched_comparisons": {
+    "JEV baseline": {
+      "metrics": {
+        "n": 6,
+        "role_correct": 0.5,
+        "step_exact": 0.3333333333333333,
+        "step_within_5": 0.6666666666666666,
+        "valid_role": 1.0,
+        "valid_step": 1.0,
+        "valid_output_root_mae": 7
+      },
+      "calls": 72,
+      "input_tokens": 945371
+    },
+    "JEV-RCTA historical": {
+      "metrics": {
+        "n": 6,
+        "role_correct": 0.5,
+        "step_exact": 0.3333333333333333,
+        "step_within_5": 0.6666666666666666,
+        "valid_role": 1.0,
+        "valid_step": 1.0,
+        "valid_output_root_mae": 83.66666666666667
+      },
+      "calls": 148,
+      "input_tokens": 1302160
+    },
+    "Adaptive v1 strict": {
+      "metrics": {
+        "n": 6,
+        "role_correct": 0.0,
+        "step_exact": 0.0,
+        "step_within_5": 0.0,
+        "valid_role": 0.0,
+        "valid_step": 0.0,
+        "valid_output_root_mae": null
+      },
+      "calls": 161,
+      "input_tokens": 996459
+    }
+  },
+  "states": {
+    "abstained": 1,
+    "best_effort": 5
+  },
+  "case_calls": 91,
+  "case_input_tokens": 324485,
+  "case_output_tokens": 13952,
+  "audit": "frozen sources, requests, histories, usage and evidence pointers passed",
+  "cases": [
+    {
+      "question_ID": "swe_bench_pro__039",
+      "reference_step": 43,
+      "reference_role": "DiagnostAgent (-> ActionAgent)",
+      "predicted_step": 134,
+      "predicted_role": "ActionAgent",
+      "verified_step": null,
+      "decision_status": "best_effort",
+      "decision_reason": "point_prediction_unverified",
+      "api_calls": 14,
+      "input_tokens": 55631,
+      "output_tokens": 2071,
+      "coverage": {
+        "total_segments": 167,
+        "read_segments": 2,
+        "routing_questions": 3,
+        "pending_regions": 13,
+        "pending_leads": 9,
+        "action_spans_read": 11,
+        "full_scan": false,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "reserved_final_tokens"
+    },
+    {
+      "question_ID": "swe_bench_pro__114",
+      "reference_step": 21,
+      "reference_role": "DiagnostAgent (-> ActionAgent)",
+      "predicted_step": null,
+      "predicted_role": null,
+      "verified_step": null,
+      "decision_status": "abstained",
+      "decision_reason": "no_final_candidate",
+      "api_calls": 12,
+      "input_tokens": 53997,
+      "output_tokens": 1818,
+      "coverage": {
+        "total_segments": 19,
+        "read_segments": 2,
+        "routing_questions": 2,
+        "pending_regions": 6,
+        "pending_leads": 11,
+        "action_spans_read": 12,
+        "full_scan": false,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "reserved_final_tokens"
+    },
+    {
+      "question_ID": "terminal_bench_2__003",
+      "reference_step": 10,
+      "reference_role": "DiagnostAgent (-> ActionAgent)",
+      "predicted_step": 10,
+      "predicted_role": null,
+      "verified_step": null,
+      "decision_status": "best_effort",
+      "decision_reason": "point_prediction_unverified",
+      "api_calls": 15,
+      "input_tokens": 56258,
+      "output_tokens": 2273,
+      "coverage": {
+        "total_segments": 7,
+        "read_segments": 2,
+        "routing_questions": 3,
+        "pending_regions": 4,
+        "pending_leads": 0,
+        "action_spans_read": 14,
+        "full_scan": false,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "reserved_final_tokens"
+    },
+    {
+      "question_ID": "travelplanner__606",
+      "reference_step": 20,
+      "reference_role": "manager_agent",
+      "predicted_step": 0,
+      "predicted_role": "Computer_terminal",
+      "verified_step": null,
+      "decision_status": "best_effort",
+      "decision_reason": "point_prediction_unverified",
+      "api_calls": 17,
+      "input_tokens": 58921,
+      "output_tokens": 2728,
+      "coverage": {
+        "total_segments": 7,
+        "read_segments": 3,
+        "routing_questions": 3,
+        "pending_regions": 3,
+        "pending_leads": 41,
+        "action_spans_read": 13,
+        "full_scan": false,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "reserved_final_tokens"
+    },
+    {
+      "question_ID": "vitabench__089",
+      "reference_step": 8,
+      "reference_role": "Action_Expert",
+      "predicted_step": 6,
+      "predicted_role": null,
+      "verified_step": null,
+      "decision_status": "best_effort",
+      "decision_reason": "point_prediction_unverified",
+      "api_calls": 15,
+      "input_tokens": 42340,
+      "output_tokens": 2520,
+      "coverage": {
+        "total_segments": 1,
+        "read_segments": 1,
+        "routing_questions": 0,
+        "pending_regions": 0,
+        "pending_leads": 7,
+        "action_spans_read": 10,
+        "full_scan": true,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "round_budget"
+    },
+    {
+      "question_ID": "webarena_verified__092",
+      "reference_step": 8,
+      "reference_role": "Verification_Expert",
+      "predicted_step": 8,
+      "predicted_role": "Verification_Expert",
+      "verified_step": null,
+      "decision_status": "best_effort",
+      "decision_reason": "point_prediction_unverified",
+      "api_calls": 18,
+      "input_tokens": 57338,
+      "output_tokens": 2542,
+      "coverage": {
+        "total_segments": 10,
+        "read_segments": 3,
+        "routing_questions": 3,
+        "pending_regions": 4,
+        "pending_leads": 14,
+        "action_spans_read": 10,
+        "full_scan": false,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "reserved_final_tokens"
+    }
+  ]
+}

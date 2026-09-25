@@ -1,0 +1,30 @@
+{
+  "tests_run": 70,
+  "passed": 65,
+  "failures": 0,
+  "errors": 0,
+  "skipped": [
+    {
+      "test": "test_client_refuses_truncation_before_forward (test_laya.LayaTests)",
+      "reason": "Laya tests require the isolated inference environment"
+    },
+    {
+      "test": "test_lossless_unicode_recall_and_option_limits (test_laya.LayaTests)",
+      "reason": "Laya tests require the isolated inference environment"
+    },
+    {
+      "test": "test_no_hidden_header_or_state_truncation (test_laya.LayaTests)",
+      "reason": "Laya tests require the isolated inference environment"
+    },
+    {
+      "test": "test_reject_long_option_text (test_laya.LayaTests)",
+      "reason": "Laya tests require the isolated inference environment"
+    },
+    {
+      "test": "test_singleton_and_cache_are_not_model_calls (test_laya.LayaTests)",
+      "reason": "Laya tests require the isolated inference environment"
+    }
+  ],
+  "jev_api_calls": 0,
+  "scope": "Offline tests; HTTP is mocked in transport tests. Synthetic responses are not model measurements."
+}

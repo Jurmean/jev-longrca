@@ -1,0 +1,16 @@
+Use case: infographic-diagram.
+Asset type: main architecture figure for an academic machine learning paper, matching an implemented JEV-only root cause attribution pipeline.
+Create a polished publication-ready landscape scientific diagram on pure white, at high resolution, ideally 3840x2160. Flat precise vector-like shapes rendered as a raster illustration; dark readable typography; generous white space; restrained blue, teal and amber accents. No 3D, no cartoon robots, no decorative backgrounds, no logos, no invented performance numbers.
+Title, exactly: "Adaptive JEV-RCTA"
+Subtitle, exactly: "Probability-guided evidence search for long-trajectory root cause attribution"
+
+Arrange FOUR clear panels from left to right, with the third panel largest:
+(A) "Evidence index" — draw an ordered stack of trajectory messages, a segment grouping bracket, then small original text spans with exact example IDs "step 1" and "step 2". Show label "Lossless segments" and label "Span IDs + hashes". These are original text fragments, not generated summaries.
+(B) "Labels & adaptive sets" — show tidy small cards labeled "Event", "Failure", "Relevance". Below, show two small probability bar distributions: one peaked distribution retaining one branch and one diffuse distribution retaining several branches. Label exactly "Variable candidate count". Include one small tag "Unknown". No fixed top-k notation.
+(C) "Budgeted question search" — an explicit small branching question tree with multiple alternative hypotheses and a preserved grey alternative branch. Nodes use short labels "Inspect", "Trace upstream", "Check repair", "Challenge". Show a side action "Expand context". A thin amber curved arrow from a contradicted leaf returns to an earlier branching node; label exactly "Backtrack". Show a loop labeled "Update hypotheses". Above or below this tree, a compact controller label reads "Discrimination / cost". This is a heuristic priority, NOT an optimality theorem or exact EC2 algorithm. Keep the tree readable, not a linear mandatory chain.
+(D) "Verify & attribute" — show an evidence-check symbol connected to three clean result fields "Root step", "Responsible role", "Original evidence". A separate small amber exit reads "Abstain if unresolved". Do not show invented accuracies.
+
+Along the lower portion, a long original-evidence store connects to panel A and to panel C with thin blue arrows labeled "Retrieve raw spans". Beneath the central panels, a compact shared engine box reads "JEV Choice" with small text "Typed answers + probabilities"; show its service relationship to labeling and question answering without crossing panel text. The budget controller controls requests; raw evidence always comes from the original trajectory, never from a language-model generated summary. Make arrow direction and feedback loops unambiguous.
+
+At the very bottom, include only this concise line: "Adaptive selection · Structured labels · Multi-round questions · Evidence verification"
+English text only. Render all quoted text verbatim, with sharp large typography readable when scaled down. No citations or reference list inside the artwork. No claim of calibrated correctness, formal tree-level coverage or measured accuracy. The figure describes a implemented engineering prototype, not performance results.

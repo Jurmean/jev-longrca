@@ -1,0 +1,201 @@
+question_ID,source,completed,reference_step,reference_role,predicted_step,predicted_role,decision_reason,tentative_step,tentative_role,api_calls,input_tokens,output_tokens
+swe_bench_pro__008,swe_bench_pro,True,54,ActionAgent,,,input_token_budget,,,26,308093,12677
+swe_bench_pro__009,swe_bench_pro,True,52,ActionAgent,,,input_token_budget,,,39,303935,12899
+swe_bench_pro__010,swe_bench_pro,True,76,ActionAgent,,,input_token_budget,,,27,302426,12945
+swe_bench_pro__012,swe_bench_pro,True,21,DiagnostAgent (-> ActionAgent),,,final_context_ambiguity,,,38,253319,9237
+swe_bench_pro__013,swe_bench_pro,True,23,DiagnostAgent (-> ActionAgent),,,final_context_ambiguity,,,35,242819,7917
+swe_bench_pro__018,swe_bench_pro,True,23,DiagnostAgent,,,final_context_ambiguity,,,44,303594,13651
+swe_bench_pro__019,swe_bench_pro,True,57,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,45,313484,14073
+swe_bench_pro__024,swe_bench_pro,True,44,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,28,308212,12380
+swe_bench_pro__025,swe_bench_pro,True,42,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,43,300275,12929
+swe_bench_pro__033,swe_bench_pro,True,99,ActionAgent,,,input_token_budget,,,33,302898,14721
+swe_bench_pro__034,swe_bench_pro,True,66,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,38,304152,12869
+swe_bench_pro__035,swe_bench_pro,True,25,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,41,316973,12154
+swe_bench_pro__036,swe_bench_pro,True,25,DiagnostAgent,,,input_token_budget,,,33,301122,13096
+swe_bench_pro__039,swe_bench_pro,True,43,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,27,307258,12683
+swe_bench_pro__044,swe_bench_pro,True,57,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,27,303500,14069
+swe_bench_pro__047,swe_bench_pro,True,133,ActionAgent,,,input_token_budget,,,36,301625,14440
+swe_bench_pro__048,swe_bench_pro,True,33,DiagnostAgent (-> ActionAgent),,,final_context_ambiguity,,,42,302777,11636
+swe_bench_pro__049,swe_bench_pro,True,44,ActionAgent,,,input_token_budget,,,40,306046,11281
+swe_bench_pro__054,swe_bench_pro,True,51,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,32,303830,12934
+swe_bench_pro__057,swe_bench_pro,True,80,DiagnostAgent,,,input_token_budget,,,28,307969,13858
+swe_bench_pro__058,swe_bench_pro,True,40,ActionAgent,,,input_token_budget,,,42,304025,12710
+swe_bench_pro__065,swe_bench_pro,True,43,ActionAgent,,,input_token_budget,,,32,304861,13415
+swe_bench_pro__068,swe_bench_pro,True,37,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,30,302097,13098
+swe_bench_pro__070,swe_bench_pro,True,23,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,30,302539,12595
+swe_bench_pro__071,swe_bench_pro,True,27,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,35,304080,12281
+swe_bench_pro__074,swe_bench_pro,True,205,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,26,305964,13462
+swe_bench_pro__076,swe_bench_pro,True,43,DiagnostAgent (-> ActionAgent),,,final_context_ambiguity,,,41,304885,11578
+swe_bench_pro__084,swe_bench_pro,True,77,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,25,303120,12363
+swe_bench_pro__094,swe_bench_pro,True,35,DiagnostAgent,,,input_token_budget,,,37,304092,11834
+swe_bench_pro__095,swe_bench_pro,True,21,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,31,300633,14132
+swe_bench_pro__096,swe_bench_pro,True,38,ActionAgent,,,input_token_budget,,,26,303204,11937
+swe_bench_pro__104,swe_bench_pro,True,29,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,45,302162,15040
+swe_bench_pro__105,swe_bench_pro,True,6,Computer_terminal,,,input_token_budget,,,28,310031,13771
+swe_bench_pro__112,swe_bench_pro,True,13,DiagnostAgent (-> ActionAgent),,,final_context_ambiguity,,,39,268709,9632
+swe_bench_pro__114,swe_bench_pro,True,21,DiagnostAgent (-> ActionAgent),,,final_context_ambiguity,,,34,235183,7817
+swe_bench_pro__115,swe_bench_pro,True,45,DiagnostAgent (-> ActionAgent),,,final_context_ambiguity,,,36,253606,9567
+swe_bench_pro__116,swe_bench_pro,True,17,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,32,310801,14306
+swe_bench_pro__121,swe_bench_pro,True,15,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,43,305173,14365
+swe_bench_pro__124,swe_bench_pro,True,52,ActionAgent,,,input_token_budget,,,28,305159,13146
+swe_bench_pro__125,swe_bench_pro,True,35,DiagnostAgent (-> ActionAgent),,,input_token_budget,,,37,300782,13997
+terminal_bench_2__001,terminal_bench_2,True,212,ActionAgent,,,input_token_budget,,,30,302642,14226
+terminal_bench_2__002,terminal_bench_2,False,64,ActionAgent,,,,,,,,
+terminal_bench_2__003,terminal_bench_2,True,10,DiagnostAgent (-> ActionAgent),,,incomplete_evidence_checks,10,DiagnostAgent,29,139964,5176
+terminal_bench_2__004,terminal_bench_2,False,69,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__005,terminal_bench_2,False,28,DiagnostAgent,,,,,,,,
+terminal_bench_2__006,terminal_bench_2,False,53,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__007,terminal_bench_2,False,28,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__008,terminal_bench_2,False,3,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__009,terminal_bench_2,False,5,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__011,terminal_bench_2,False,3,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__012,terminal_bench_2,False,36,ActionAgent,,,,,,,,
+terminal_bench_2__013,terminal_bench_2,False,15,DiagnostAgent,,,,,,,,
+terminal_bench_2__014,terminal_bench_2,False,7,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__015,terminal_bench_2,False,12,ActionAgent,,,,,,,,
+terminal_bench_2__016,terminal_bench_2,False,398,JudgeAgent,,,,,,,,
+terminal_bench_2__017,terminal_bench_2,False,143,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__018,terminal_bench_2,False,44,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__020,terminal_bench_2,False,14,ActionAgent,,,,,,,,
+terminal_bench_2__021,terminal_bench_2,False,14,ActionAgent,,,,,,,,
+terminal_bench_2__022,terminal_bench_2,False,5,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__023,terminal_bench_2,False,20,ActionAgent,,,,,,,,
+terminal_bench_2__024,terminal_bench_2,False,3,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__025,terminal_bench_2,False,73,ActionAgent,,,,,,,,
+terminal_bench_2__026,terminal_bench_2,False,51,ActionAgent,,,,,,,,
+terminal_bench_2__027,terminal_bench_2,False,517,JudgeAgent,,,,,,,,
+terminal_bench_2__028,terminal_bench_2,False,57,Computer_terminal,,,,,,,,
+terminal_bench_2__029,terminal_bench_2,False,94,JudgeAgent,,,,,,,,
+terminal_bench_2__030,terminal_bench_2,False,52,ActionAgent,,,,,,,,
+terminal_bench_2__031,terminal_bench_2,False,160,ActionAgent,,,,,,,,
+terminal_bench_2__032,terminal_bench_2,False,182,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__033,terminal_bench_2,False,29,ActionAgent,,,,,,,,
+terminal_bench_2__034,terminal_bench_2,False,47,ActionAgent,,,,,,,,
+terminal_bench_2__035,terminal_bench_2,False,72,ActionAgent,,,,,,,,
+terminal_bench_2__036,terminal_bench_2,False,87,ActionAgent,,,,,,,,
+terminal_bench_2__037,terminal_bench_2,False,179,DiagnostAgent (-> ActionAgent),,,,,,,,
+terminal_bench_2__038,terminal_bench_2,False,9,DiagnostAgent,,,,,,,,
+terminal_bench_2__039,terminal_bench_2,False,107,DiagnostAgent,,,,,,,,
+terminal_bench_2__040,terminal_bench_2,False,85,ActionAgent,,,,,,,,
+terminal_bench_2__041,terminal_bench_2,False,180,ActionAgent,,,,,,,,
+terminal_bench_2__042,terminal_bench_2,False,330,DiagnostAgent (-> ActionAgent),,,,,,,,
+travelplanner__039,travelplanner,False,54,verifier_agent,,,,,,,,
+travelplanner__041,travelplanner,False,46,stay_agent,,,,,,,,
+travelplanner__064,travelplanner,False,284,manager_agent,,,,,,,,
+travelplanner__071,travelplanner,False,219,transport_agent,,,,,,,,
+travelplanner__073,travelplanner,False,161,verifier_agent,,,,,,,,
+travelplanner__187,travelplanner,False,97,stay_agent,,,,,,,,
+travelplanner__221,travelplanner,False,31,stay_agent,,,,,,,,
+travelplanner__229,travelplanner,False,238,food_attr_agent,,,,,,,,
+travelplanner__240,travelplanner,False,39,stay_agent,,,,,,,,
+travelplanner__243,travelplanner,False,1,Task_Planner,,,,,,,,
+travelplanner__248,travelplanner,False,45,stay_agent,,,,,,,,
+travelplanner__249,travelplanner,False,69,stay_agent,,,,,,,,
+travelplanner__256,travelplanner,False,114,manager_agent,,,,,,,,
+travelplanner__283,travelplanner,False,70,food_attr_agent,,,,,,,,
+travelplanner__293,travelplanner,False,132,verifier_agent,,,,,,,,
+travelplanner__297,travelplanner,False,84,transport_agent,,,,,,,,
+travelplanner__339,travelplanner,False,78,food_attr_agent,,,,,,,,
+travelplanner__348,travelplanner,False,149,stay_agent,,,,,,,,
+travelplanner__352,travelplanner,False,126,verifier_agent,,,,,,,,
+travelplanner__369,travelplanner,False,84,Computer_terminal,,,,,,,,
+travelplanner__446,travelplanner,False,42,stay_agent,,,,,,,,
+travelplanner__452,travelplanner,False,136,stay_agent,,,,,,,,
+travelplanner__456,travelplanner,False,88,stay_agent,,,,,,,,
+travelplanner__458,travelplanner,False,84,stay_agent,,,,,,,,
+travelplanner__467,travelplanner,False,2,Task_Planner,,,,,,,,
+travelplanner__478,travelplanner,False,169,food_attr_agent,,,,,,,,
+travelplanner__525,travelplanner,False,70,stay_agent,,,,,,,,
+travelplanner__540,travelplanner,False,107,Task_Planner,,,,,,,,
+travelplanner__606,travelplanner,True,20,manager_agent,,,final_context_ambiguity,,,30,139223,6117
+travelplanner__607,travelplanner,False,65,food_attr_agent,,,,,,,,
+travelplanner__638,travelplanner,False,14,manager_agent,,,,,,,,
+travelplanner__640,travelplanner,False,108,stay_agent,,,,,,,,
+travelplanner__643,travelplanner,False,161,verifier_agent,,,,,,,,
+travelplanner__645,travelplanner,False,130,stay_agent,,,,,,,,
+travelplanner__646,travelplanner,False,65,Task_Planner,,,,,,,,
+travelplanner__664,travelplanner,False,88,Task_Planner,,,,,,,,
+travelplanner__679,travelplanner,False,259,Task_Planner,,,,,,,,
+travelplanner__681,travelplanner,False,35,Computer_terminal,,,,,,,,
+travelplanner__684,travelplanner,False,22,manager_agent,,,,,,,,
+travelplanner__685,travelplanner,False,173,manager_agent,,,,,,,,
+vitabench__005,vitabench,False,14,Action_Expert,,,,,,,,
+vitabench__008,vitabench,False,51,Computer_terminal,,,,,,,,
+vitabench__010,vitabench,False,23,Action_Expert,,,,,,,,
+vitabench__013,vitabench,False,40,Action_Expert,,,,,,,,
+vitabench__022,vitabench,False,12,Action_Expert,,,,,,,,
+vitabench__025,vitabench,False,58,Action_Expert,,,,,,,,
+vitabench__028,vitabench,False,33,Computer_terminal,,,,,,,,
+vitabench__030,vitabench,False,6,Action_Expert,,,,,,,,
+vitabench__031,vitabench,False,40,Action_Expert,,,,,,,,
+vitabench__032,vitabench,False,4,Action_Expert,,,,,,,,
+vitabench__034,vitabench,False,36,Action_Expert,,,,,,,,
+vitabench__037,vitabench,False,16,Action_Expert,,,,,,,,
+vitabench__040,vitabench,False,20,Action_Expert,,,,,,,,
+vitabench__041,vitabench,False,1,Computer_terminal,,,,,,,,
+vitabench__042,vitabench,False,41,Action_Expert,,,,,,,,
+vitabench__045,vitabench,False,54,Action_Expert,,,,,,,,
+vitabench__046,vitabench,False,2,Action_Expert,,,,,,,,
+vitabench__048,vitabench,False,26,Action_Expert,,,,,,,,
+vitabench__049,vitabench,False,4,Action_Expert,,,,,,,,
+vitabench__050,vitabench,False,2,Action_Expert,,,,,,,,
+vitabench__054,vitabench,False,10,Action_Expert,,,,,,,,
+vitabench__057,vitabench,False,4,Action_Expert,,,,,,,,
+vitabench__058,vitabench,False,34,Action_Expert,,,,,,,,
+vitabench__061,vitabench,False,2,Action_Expert,,,,,,,,
+vitabench__062,vitabench,False,61,Computer_terminal,,,,,,,,
+vitabench__065,vitabench,False,13,Action_Expert,,,,,,,,
+vitabench__070,vitabench,False,48,Action_Expert,,,,,,,,
+vitabench__072,vitabench,False,14,Action_Expert,,,,,,,,
+vitabench__076,vitabench,False,10,Action_Expert,,,,,,,,
+vitabench__083,vitabench,False,90,Action_Expert,,,,,,,,
+vitabench__084,vitabench,False,12,Action_Expert,,,,,,,,
+vitabench__086,vitabench,False,26,Action_Expert,,,,,,,,
+vitabench__087,vitabench,False,34,Action_Expert,,,,,,,,
+vitabench__089,vitabench,True,8,Action_Expert,,,uncertain_final_choice,6,Action_Expert,11,32200,1868
+vitabench__095,vitabench,False,15,Computer_terminal,,,,,,,,
+vitabench__096,vitabench,False,20,Action_Expert,,,,,,,,
+vitabench__097,vitabench,False,16,Action_Expert,,,,,,,,
+vitabench__099,vitabench,False,17,Computer_terminal,,,,,,,,
+vitabench__101,vitabench,False,14,Action_Expert,,,,,,,,
+vitabench__105,vitabench,False,21,Action_Expert,,,,,,,,
+webarena_verified__004,webarena_verified,False,42,Task_Planner,,,,,,,,
+webarena_verified__006,webarena_verified,False,28,Verification_Expert,,,,,,,,
+webarena_verified__010,webarena_verified,False,46,Action_Expert,,,,,,,,
+webarena_verified__011,webarena_verified,False,2,Task_Planner,,,,,,,,
+webarena_verified__012,webarena_verified,False,18,Verification_Expert,,,,,,,,
+webarena_verified__013,webarena_verified,False,6,Action_Expert,,,,,,,,
+webarena_verified__015,webarena_verified,False,34,Task_Planner,,,,,,,,
+webarena_verified__016,webarena_verified,False,6,Action_Expert,,,,,,,,
+webarena_verified__024,webarena_verified,False,44,Task_Planner,,,,,,,,
+webarena_verified__025,webarena_verified,False,9,Verification_Expert,,,,,,,,
+webarena_verified__027,webarena_verified,False,36,Action_Expert,,,,,,,,
+webarena_verified__028,webarena_verified,False,34,Task_Planner,,,,,,,,
+webarena_verified__029,webarena_verified,False,46,Action_Expert,,,,,,,,
+webarena_verified__039,webarena_verified,False,8,Verification_Expert,,,,,,,,
+webarena_verified__042,webarena_verified,False,29,Verification_Expert,,,,,,,,
+webarena_verified__045,webarena_verified,False,6,Action_Expert,,,,,,,,
+webarena_verified__046,webarena_verified,False,56,Action_Expert,,,,,,,,
+webarena_verified__047,webarena_verified,False,19,Verification_Expert,,,,,,,,
+webarena_verified__048,webarena_verified,False,2,Task_Planner,,,,,,,,
+webarena_verified__054,webarena_verified,False,56,Action_Expert,,,,,,,,
+webarena_verified__058,webarena_verified,False,46,Action_Expert,,,,,,,,
+webarena_verified__071,webarena_verified,False,4,Task_Planner,,,,,,,,
+webarena_verified__082,webarena_verified,False,56,Action_Expert,,,,,,,,
+webarena_verified__083,webarena_verified,False,7,Task_Planner,,,,,,,,
+webarena_verified__092,webarena_verified,True,8,Verification_Expert,,,incomplete_evidence_checks,8,Verification_Expert,30,142631,5632
+webarena_verified__093,webarena_verified,False,14,Task_Planner,,,,,,,,
+webarena_verified__096,webarena_verified,False,46,Action_Expert,,,,,,,,
+webarena_verified__097,webarena_verified,False,46,Action_Expert,,,,,,,,
+webarena_verified__106,webarena_verified,False,46,Action_Expert,,,,,,,,
+webarena_verified__113,webarena_verified,False,46,Action_Expert,,,,,,,,
+webarena_verified__115,webarena_verified,False,34,Task_Planner,,,,,,,,
+webarena_verified__117,webarena_verified,False,16,Action_Expert,,,,,,,,
+webarena_verified__126,webarena_verified,False,6,Action_Expert,,,,,,,,
+webarena_verified__133,webarena_verified,False,6,Action_Expert,,,,,,,,
+webarena_verified__135,webarena_verified,False,46,Action_Expert,,,,,,,,
+webarena_verified__139,webarena_verified,False,56,Action_Expert,,,,,,,,
+webarena_verified__141,webarena_verified,False,56,Action_Expert,,,,,,,,
+webarena_verified__151,webarena_verified,False,56,Action_Expert,,,,,,,,
+webarena_verified__158,webarena_verified,False,56,Action_Expert,,,,,,,,
+webarena_verified__160,webarena_verified,False,15,Task_Planner,,,,,,,,

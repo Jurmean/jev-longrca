@@ -1,0 +1,233 @@
+{
+  "scope": "small selected diagnostic sample; not full Mini or unbiased accuracy evidence",
+  "runs": [
+    {
+      "directory": "results/jev_rcta_adaptive_v2_smoke_20260924",
+      "progress": {
+        "status": "complete",
+        "completed_n": 5,
+        "requested_n": 5,
+        "completed_ids": [
+          "swe_bench_pro__114",
+          "terminal_bench_2__003",
+          "travelplanner__606",
+          "vitabench__089",
+          "webarena_verified__092"
+        ]
+      },
+      "accounting": {
+        "successful_responses": 78,
+        "input_tokens": 269183,
+        "output_tokens": 11912,
+        "successful_request_network_attempts": 78,
+        "control_responses": 1,
+        "control_input_tokens": 329,
+        "control_output_tokens": 31,
+        "reported_cost_usd": null,
+        "retry_events": 0,
+        "note": "Includes controls and successful calls in unfinished cases. Unknown-response failures may be charged; no price or account balance inferred."
+      }
+    }
+  ],
+  "n": 5,
+  "answered_n": 4,
+  "supported_n": 0,
+  "metrics": {
+    "n": 5,
+    "role_correct": 0.2,
+    "step_exact": 0.4,
+    "step_within_5": 0.6,
+    "valid_role": 0.4,
+    "valid_step": 0.8,
+    "valid_output_root_mae": 5.5
+  },
+  "answered_metrics": {
+    "n": 4,
+    "role_correct": 0.25,
+    "step_exact": 0.5,
+    "step_within_5": 0.75,
+    "valid_role": 0.5,
+    "valid_step": 1.0,
+    "valid_output_root_mae": 5.5
+  },
+  "verified_metrics_all_cases": {
+    "n": 5,
+    "role_correct": 0.0,
+    "step_exact": 0.0,
+    "step_within_5": 0.0,
+    "valid_role": 0.0,
+    "valid_step": 0.0,
+    "valid_output_root_mae": null
+  },
+  "matched_comparisons": {
+    "JEV baseline": {
+      "metrics": {
+        "n": 5,
+        "role_correct": 0.6,
+        "step_exact": 0.4,
+        "step_within_5": 0.8,
+        "valid_role": 1.0,
+        "valid_step": 1.0,
+        "valid_output_root_mae": 3
+      },
+      "calls": 18,
+      "input_tokens": 165149
+    },
+    "JEV-RCTA historical": {
+      "metrics": {
+        "n": 5,
+        "role_correct": 0.6,
+        "step_exact": 0.4,
+        "step_within_5": 0.8,
+        "valid_role": 1.0,
+        "valid_step": 1.0,
+        "valid_output_root_mae": 7.4
+      },
+      "calls": 43,
+      "input_tokens": 292821
+    },
+    "Adaptive v1 strict": {
+      "metrics": {
+        "n": 5,
+        "role_correct": 0.0,
+        "step_exact": 0.0,
+        "step_within_5": 0.0,
+        "valid_role": 0.0,
+        "valid_step": 0.0,
+        "valid_output_root_mae": null
+      },
+      "calls": 134,
+      "input_tokens": 689201
+    }
+  },
+  "states": {
+    "abstained": 1,
+    "best_effort": 4
+  },
+  "case_calls": 77,
+  "case_input_tokens": 268854,
+  "case_output_tokens": 11881,
+  "audit": "frozen sources, requests, histories, usage and evidence pointers passed",
+  "cases": [
+    {
+      "question_ID": "swe_bench_pro__114",
+      "reference_step": 21,
+      "reference_role": "DiagnostAgent (-> ActionAgent)",
+      "predicted_step": null,
+      "predicted_role": null,
+      "verified_step": null,
+      "decision_status": "abstained",
+      "decision_reason": "no_final_candidate",
+      "api_calls": 12,
+      "input_tokens": 53997,
+      "output_tokens": 1818,
+      "coverage": {
+        "total_segments": 19,
+        "read_segments": 2,
+        "routing_questions": 2,
+        "pending_regions": 6,
+        "pending_leads": 11,
+        "action_spans_read": 12,
+        "full_scan": false,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "reserved_final_tokens"
+    },
+    {
+      "question_ID": "terminal_bench_2__003",
+      "reference_step": 10,
+      "reference_role": "DiagnostAgent (-> ActionAgent)",
+      "predicted_step": 10,
+      "predicted_role": null,
+      "verified_step": null,
+      "decision_status": "best_effort",
+      "decision_reason": "point_prediction_unverified",
+      "api_calls": 15,
+      "input_tokens": 56258,
+      "output_tokens": 2273,
+      "coverage": {
+        "total_segments": 7,
+        "read_segments": 2,
+        "routing_questions": 3,
+        "pending_regions": 4,
+        "pending_leads": 0,
+        "action_spans_read": 14,
+        "full_scan": false,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "reserved_final_tokens"
+    },
+    {
+      "question_ID": "travelplanner__606",
+      "reference_step": 20,
+      "reference_role": "manager_agent",
+      "predicted_step": 0,
+      "predicted_role": "Computer_terminal",
+      "verified_step": null,
+      "decision_status": "best_effort",
+      "decision_reason": "point_prediction_unverified",
+      "api_calls": 17,
+      "input_tokens": 58921,
+      "output_tokens": 2728,
+      "coverage": {
+        "total_segments": 7,
+        "read_segments": 3,
+        "routing_questions": 3,
+        "pending_regions": 3,
+        "pending_leads": 41,
+        "action_spans_read": 13,
+        "full_scan": false,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "reserved_final_tokens"
+    },
+    {
+      "question_ID": "vitabench__089",
+      "reference_step": 8,
+      "reference_role": "Action_Expert",
+      "predicted_step": 6,
+      "predicted_role": null,
+      "verified_step": null,
+      "decision_status": "best_effort",
+      "decision_reason": "point_prediction_unverified",
+      "api_calls": 15,
+      "input_tokens": 42340,
+      "output_tokens": 2520,
+      "coverage": {
+        "total_segments": 1,
+        "read_segments": 1,
+        "routing_questions": 0,
+        "pending_regions": 0,
+        "pending_leads": 7,
+        "action_spans_read": 10,
+        "full_scan": true,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "round_budget"
+    },
+    {
+      "question_ID": "webarena_verified__092",
+      "reference_step": 8,
+      "reference_role": "Verification_Expert",
+      "predicted_step": 8,
+      "predicted_role": "Verification_Expert",
+      "verified_step": null,
+      "decision_status": "best_effort",
+      "decision_reason": "point_prediction_unverified",
+      "api_calls": 18,
+      "input_tokens": 57338,
+      "output_tokens": 2542,
+      "coverage": {
+        "total_segments": 10,
+        "read_segments": 3,
+        "routing_questions": 3,
+        "pending_regions": 4,
+        "pending_leads": 14,
+        "action_spans_read": 10,
+        "full_scan": false,
+        "verification_scope": "retrieved_original_evidence; not exhaustive global causality"
+      },
+      "stop_reason": "reserved_final_tokens"
+    }
+  ]
+}

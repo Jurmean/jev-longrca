@@ -2,9 +2,45 @@
 
 使用 JEV Choice 接口对 LongRCA Bench 的失败轨迹进行责任角色归因与根因步骤定位，包含原始候选筛选基线、RCTA 启发的实验架构和 Laya 本地对照。
 
-**当前 JEV-RCTA 只完成 64 / 1,140 条，不能作为 Full 结果。** 已完成结果通过原始请求与响应的离线重放审计。原始 JEV 基线和 Laya 对照分别完成了 Full 1,140 条。
+## 当前实验 pipeline：Adaptive JEV-RCTA v3.1
 
-## 架构
+当前代码实现：**无损原文索引 → 按预算选择完整原文或 RRF/MMR 检索 → JEV 概率排序与结构化标签 → 多轮补证 → 根因预测 → 责任角色判断与原文核验。**
+
+这是保留用于复现和分析的实验版本，**没有取得优于原 JEV baseline 的准确率**。Mini 在完成 **100/200** 条后按用户要求停止；停止目录不会自动恢复，不能将部分结果当作完整 Mini 得分。
+
+| 同一批已完成的 100 条 | 根因 Exact | 根因 ±5 | 角色准确率 |
+|---|---:|---:|---:|
+| 历史 JEV baseline | 20% | 35% | 37% |
+| Adaptive JEV-RCTA v3.1 | 10% | 17% | 35% |
+
+本版给出 79 条步骤预测、21 条弃答，严格核验通过 0 条。本次保存 1,253 次成功响应，输入 5,841,899 tokens、输出 258,373 tokens，包含连接检查和未完成样本的中间请求；未据此估算美元账单。
+
+| 文件 | 内容 |
+|---|---|
+| [`scripts/jev_rcta_adaptive_v3.py`](scripts/jev_rcta_adaptive_v3.py) | 当前 v3.1 控制器、检索反馈、分轮归因及核验 |
+| [`scripts/rcta_retrieval.py`](scripts/rcta_retrieval.py) | 完整原文路径、BM25、RRF 和 MMR |
+| [`scripts/evaluate_jev_rcta_adaptive_v3.py`](scripts/evaluate_jev_rcta_adaptive_v3.py) | 离线演示、原文审计与显式真实运行入口 |
+| [`tests/test_rcta_adaptive_v3.py`](tests/test_rcta_adaptive_v3.py) | 当前方法的离线回归测试 |
+
+- [架构、预算与使用方法](docs/ADAPTIVE_RCTA_V3.md)
+- [论文思想与实现边界](reports/jev_rcta_v3_literature_20260924.md)
+- [Mini 停止报告](reports/jev_rcta_adaptive_v31_mini_20260924_report.md)、[逐例结果](reports/jev_rcta_adaptive_v31_mini_20260924_predictions.csv)、[离线失败分析](docs/PIPELINE_FAILURE_ANALYSIS.md)
+- [v2 说明](docs/ADAPTIVE_RCTA_V2.md)、[v1 说明](docs/ADAPTIVE_RCTA.md)
+
+先运行无需密钥、无需数据集的离线检查和合成演示：
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 scripts/evaluate_jev_rcta_adaptive_v3.py --demo --output results/local_v31_demo
+```
+
+演示使用预设回复，不代表 JEV 准确率。实际调用需自行配置私有密钥并显式指定 `--live`；完整用法见架构文档。本仓库不包含原始调用缓存，历史分数不能通过合成演示重现。
+
+## 历史实验
+
+**早期托管 JEV-RCTA 只完成 64 / 1,140 条，不能作为 Full 结果。** 已完成结果通过原始请求与响应的离线重放审计。原始 JEV 基线和 Laya 对照分别完成了 Full 1,140 条。下文架构图与 64 条结果属于该历史版本，并非当前 v3.1。
+
+## 历史 JEV-RCTA 架构
 
 ![JEV-RCTA architecture](figures/jev-rcta-main.png)
 
@@ -18,7 +54,7 @@ JEV-RCTA 用固定选项判断组织长日志归因：
 
 该方法不训练、不生成摘要，也不是论文 RCTA 的等价复现。关系判断是模型假设，不能视为已验证因果。初筛覆盖全部原文，后续节选仍可能丢失证据。协议 `jev-rcta-choice-v2` 对单一选项直接确定结果，不调用 API，也不赋予模型置信度。
 
-## 当前结果
+## 历史托管结果
 
 同一批已完成的 64 条样本中，60 条来自 SWE-bench Pro，其他四来源各 1 条，存在明显来源偏差。
 
@@ -87,6 +123,7 @@ python3 scripts/report_jev_rcta_hosted.py --output results/my_hosted_run
 - `figures/`：架构图与生成提示词。
 - `data/*manifest.json`：数据版本和摘要，不含轨迹正文。
 - `reproducibility/jev-rcta-v2/`：历史方法配置、样本清单、分段审计和恢复适配器摘要。
+- `reproducibility/adaptive-v31-mini/`：v3.1 Mini 的冻结配置、进度、停止标记和执行元数据，不含请求或轨迹正文。
 - `results/phase1/config.json`、`results/full/config.json`：历史基线配置，不含预测和调用缓存。
 - `REPOSITORY_MANIFEST.json`：导出文件与摘要。
 
